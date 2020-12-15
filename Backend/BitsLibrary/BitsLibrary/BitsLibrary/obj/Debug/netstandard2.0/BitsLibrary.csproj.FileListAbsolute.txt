@@ -1,0 +1,9 @@
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.AssemblyInfoInputs.cache
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.AssemblyInfo.cs
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\bin\Debug\netstandard2.0\BitsLibrary.deps.json
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\bin\Debug\netstandard2.0\BitsLibrary.dll
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\bin\Debug\netstandard2.0\BitsLibrary.pdb
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.dll
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.pdb
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.csprojAssemblyReference.cache
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.csproj.CoreCompileInputs.cache
