@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "J0YJ1+q8qGYN2A4x1gnvMEM3bNC0Tkn0JWyLK+CO6whzdzdzvct/13+eMzsUwzU+Y3rgmLdwqDXS5lyNmS+fdw==",
+  "dgSpecHash": "y8YfSGKLnGFpgSQ2PpLRLVYpAZ+XpjI8myCGdFjGk3PHu7Eo8zNb1rPsFIePoVJqvHZ+Tb52KHfGpvlCcIx96g==",
   "success": true,
-  "projectFilePath": "G:\\Github\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj",
+  "projectFilePath": "C:\\Users\\adamj\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gwred\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\gwred\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\adamj\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\adamj\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
