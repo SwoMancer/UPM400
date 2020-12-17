@@ -13,7 +13,8 @@ namespace BitsLibrary
 {
     public static class Log
     {
-        private const string APIS_SERVER = "https://192.168.1.149/API/";
+        //private const string APIS_SERVER = "https://192.168.1.149/API/";
+        private const string APIS_SERVER = "https://wrede.blue/api/";
         private const string API = "Logging/api/csharp/set";
 
         public static Answer Add(Logs.CTypeErrorLog log) 
@@ -30,10 +31,11 @@ namespace BitsLibrary
         {
             try
             {
-                HttpClientHandler clientHandler = new HttpClientHandler();
-                clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+                //HttpClientHandler clientHandler = new HttpClientHandler();
+                //clientHandler.ServerCertificateCustomValidationCallback = (sender, cert, chain, sslPolicyErrors) => { return true; };
+                //HttpClient client = new HttpClient(clientHandler);
 
-                HttpClient client = new HttpClient(clientHandler);
+                HttpClient client = new HttpClient();
 
                 client.BaseAddress = new Uri(APIS_SERVER + API);
                 client.DefaultRequestHeaders.Accept.Clear();

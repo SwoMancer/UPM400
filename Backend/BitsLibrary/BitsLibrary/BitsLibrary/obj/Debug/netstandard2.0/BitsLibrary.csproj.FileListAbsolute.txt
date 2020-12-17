@@ -5,5 +5,5 @@ G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\bin\Debug\netstanda
 G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\bin\Debug\netstandard2.0\BitsLibrary.pdb
 G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.dll
 G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.pdb
-G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.csprojAssemblyReference.cache
 G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.csproj.CoreCompileInputs.cache
+G:\Github\UPM400\Backend\BitsLibrary\BitsLibrary\BitsLibrary\obj\Debug\netstandard2.0\BitsLibrary.csprojAssemblyReference.cache
