@@ -27,13 +27,13 @@ namespace FoodAPI.Models.Call
                     return Answer.Error("Month is to long. It needs to be 2 in length.");
                 return Answer.Error("Month is to short. It needs to be 2 in length.");
             }
-            else if(!LengthIsRight(Year, 2))
+            else if (!LengthIsRight(Year, 2))
             {
                 if (Year.ToString().Length > 2)
                     return Answer.Error("Year is to long. It needs to be 2 in length.");
                 return Answer.Error("Year is to short. It needs to be 2 in length.");
             }
-            else if(!LengthIsRight(CVC, 3))
+            else if (!LengthIsRight(CVC, 3))
             {
                 if (CVC.ToString().Length > 3)
                     return Answer.Error("CVC is to long. It needs to be 3 in length.");
@@ -49,3 +49,4 @@ namespace FoodAPI.Models.Call
             return false;
         }
     }
+}

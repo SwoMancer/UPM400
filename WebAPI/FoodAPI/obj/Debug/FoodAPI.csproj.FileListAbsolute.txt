@@ -1,3 +1,4 @@
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\roslyn\VBCSCompiler.exe
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\FoodAPI.dll.config
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\FoodAPI.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\FoodAPI.pdb
@@ -48,10 +49,13 @@ C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\roslyn\vbc.exe
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\roslyn\vbc.exe.config
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\roslyn\vbc.rsp
-C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\roslyn\VBCSCompiler.exe
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Antlr3.Runtime.dll
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.dll
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.SqlServer.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Newtonsoft.Json.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\System.Net.Http.Formatting.dll
@@ -65,6 +69,10 @@ C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\System.Web.WebPages.Deployment.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\System.Web.WebPages.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\System.Web.WebPages.Razor.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\WebGrease.dll
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.xml
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Newtonsoft.Json.xml
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\System.Net.Http.Formatting.xml
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\System.Web.Helpers.xml
@@ -83,11 +91,3 @@ C:\Users\adamj\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.csproj.CoreCompileInputs.
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.csproj.CopyComplete
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.pdb
-C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.dll
-C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.SqlServer.dll
-C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
-C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
-C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.xml
-C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.SqlServer.xml
-C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
-C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
