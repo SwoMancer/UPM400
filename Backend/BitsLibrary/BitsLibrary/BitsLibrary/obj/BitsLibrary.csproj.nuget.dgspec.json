@@ -1,24 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adamj\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj": {}
+    "G:\\Github\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adamj\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj": {
+    "G:\\Github\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adamj\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj",
+        "projectUniqueName": "G:\\Github\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj",
         "projectName": "BitsLibrary",
-        "projectPath": "C:\\Users\\adamj\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj",
-        "packagesPath": "C:\\Users\\adamj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adamj\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\obj\\",
+        "projectPath": "G:\\Github\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\BitsLibrary.csproj",
+        "packagesPath": "C:\\Users\\gwred\\.nuget\\packages\\",
+        "outputPath": "G:\\Github\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\BitsLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\adamj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "G:\\user\\GabrielWrede\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -49,6 +52,14 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [

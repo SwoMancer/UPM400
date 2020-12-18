@@ -40,7 +40,7 @@
             this.IsASuccess = isASuccess;
             this.Json = json;
         }
-
+ 
         /// <summary>
         /// Use to tell why a request failed and use an <see cref="Exception"/> to tell why.
         /// </summary>
