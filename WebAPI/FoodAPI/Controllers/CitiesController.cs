@@ -14,7 +14,7 @@ namespace FoodAPI.Controllers
 {
     public class CitiesController : ApiController
     {
-        private FoodDBEntities db = new FoodDBEntities();
+        private FoodEntities db = new FoodEntities();
 
         // GET: api/Cities
         public IQueryable<City> GetCity()

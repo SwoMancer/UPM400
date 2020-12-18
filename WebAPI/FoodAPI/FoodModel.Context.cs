@@ -13,10 +13,10 @@ namespace FoodAPI
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class FoodDBEntities : DbContext
+    public partial class FoodEntities : DbContext
     {
-        public FoodDBEntities()
-            : base("name=FoodDBEntities")
+        public FoodEntities()
+            : base("name=FoodEntities")
         {
         }
     

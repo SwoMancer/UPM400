@@ -14,7 +14,7 @@ namespace FoodAPI.Controllers
 {
     public class DrinksController : ApiController
     {
-        private FoodDBEntities db = new FoodDBEntities();
+        private FoodEntities db = new FoodEntities();
 
         // GET: api/Drinks
         public IQueryable<Drink> GetDrink()
