@@ -83,3 +83,11 @@ C:\Users\adamj\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.csproj.CoreCompileInputs.
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.csproj.CopyComplete
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.dll
 C:\Users\adamj\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.pdb
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.dll
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.SqlServer.dll
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.Base.dll
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.dll
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.xml
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\EntityFramework.SqlServer.xml
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.Base.xml
+C:\Users\adamj\UPM400\WebAPI\FoodAPI\bin\Microsoft.Configuration.ConfigurationBuilders.UserSecrets.xml
