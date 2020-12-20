@@ -184,3 +184,5 @@ E:\Openssl\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.csproj.CopyComplete
 E:\Openssl\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.dll
 E:\Openssl\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.pdb
 E:\Openssl\UPM400\WebAPI\FoodAPI\obj\Debug\FoodAPI.csprojAssemblyReference.cache
+E:\Openssl\UPM400\WebAPI\FoodAPI\bin\Logging.dll
+E:\Openssl\UPM400\WebAPI\FoodAPI\bin\Logging.pdb

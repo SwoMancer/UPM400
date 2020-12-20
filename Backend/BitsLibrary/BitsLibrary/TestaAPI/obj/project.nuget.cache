@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "2I7vGKBz9dgx41BFu6hXaMYoLVeY6FzMeNCly0CxG+eEY/6gTA+rXJiDoM+DyhglGIcAnpFkummD3L+6u8uoVQ==",
+  "dgSpecHash": "KHtIi0hr5Oht50LqOge742SBpbmamE5syHYP0KrskxOUxrqp33cnU0p62UFK/Y5LkPhvb5/YKVcz+MymE+PBkg==",
   "success": true,
-  "projectFilePath": "G:\\Github\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\TestaAPI\\TestaAPI.csproj",
+  "projectFilePath": "E:\\Openssl\\UPM400\\Backend\\BitsLibrary\\BitsLibrary\\TestaAPI\\TestaAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gwred\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
-    "C:\\Users\\gwred\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
+    "C:\\Users\\Administrator\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }

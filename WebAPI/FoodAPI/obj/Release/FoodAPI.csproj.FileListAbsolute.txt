@@ -90,3 +90,4 @@ E:\Openssl\UPM400\WebAPI\FoodAPI\obj\Release\FoodAPI.csproj.CoreCompileInputs.ca
 E:\Openssl\UPM400\WebAPI\FoodAPI\obj\Release\FoodAPI.csproj.CopyComplete
 E:\Openssl\UPM400\WebAPI\FoodAPI\obj\Release\FoodAPI.dll
 E:\Openssl\UPM400\WebAPI\FoodAPI\obj\Release\FoodAPI.pdb
+E:\Openssl\UPM400\WebAPI\FoodAPI\obj\Release\FoodAPI.csprojAssemblyReference.cache

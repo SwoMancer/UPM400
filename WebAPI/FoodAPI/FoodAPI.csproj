@@ -168,7 +168,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="City.cs">
+    <Compile Include="DB\City.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Controllers\CardController.cs" />
@@ -178,23 +178,23 @@
     <Compile Include="Controllers\IngredientsController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\RestaurantsController.cs" />
-    <Compile Include="Drink.cs">
+    <Compile Include="DB\Drink.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Food.cs">
+    <Compile Include="DB\Food.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="FoodModel.Context.cs">
+    <Compile Include="DB\FoodModel.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="FoodModel.cs">
+    <Compile Include="DB\FoodModel.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="FoodModel.Designer.cs">
+    <Compile Include="DB\FoodModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>FoodModel.edmx</DependentUpon>
@@ -202,10 +202,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Ingredient.cs">
+    <Compile Include="DB\Ingredient.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Ingredient_To_Food.cs">
+    <Compile Include="DB\Ingredient_To_Food.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Call\Answer.cs" />
@@ -216,17 +216,17 @@
     <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\Restaurant.cs" />
-    <Compile Include="Order.cs">
+    <Compile Include="DB\Order.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Order_To_Drink.cs">
+    <Compile Include="DB\Order_To_Drink.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Order_To_Food.cs">
+    <Compile Include="DB\Order_To_Food.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Restaurant.cs">
+    <Compile Include="DB\Restaurant.cs">
       <DependentUpon>FoodModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -238,12 +238,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="FoodModel.Context.tt">
+    <Content Include="DB\FoodModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FoodModel.edmx</DependentUpon>
       <LastGenOutput>FoodModel.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="FoodModel.tt">
+    <Content Include="DB\FoodModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FoodModel.edmx</DependentUpon>
       <LastGenOutput>FoodModel.cs</LastGenOutput>
@@ -270,17 +270,18 @@
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
-    <EntityDeploy Include="FoodModel.edmx">
+    <EntityDeploy Include="DB\FoodModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>FoodModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="FoodModel.edmx.diagram">
+    <Content Include="DB\FoodModel.edmx.diagram">
       <DependentUpon>FoodModel.edmx</DependentUpon>
     </Content>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\IISProfile2.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
