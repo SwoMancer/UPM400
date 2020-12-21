@@ -9,12 +9,13 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using FoodAPI;
+using FoodAPI.DB;
 
 namespace FoodAPI.Controllers
 {
     public class IngredientsController : ApiController
     {
-        private FoodDBEntities db = new FoodDBEntities();
+        private FoodEntities db = new FoodEntities();
 
         // GET: api/Ingredients
         public IQueryable<Ingredient> GetIngredient()

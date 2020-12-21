@@ -9,21 +9,22 @@ using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using FoodAPI;
+using FoodAPI.DB;
 
 namespace FoodAPI.Controllers
 {
     public class CitiesController : ApiController
     {
-        private FoodDBEntities db = new FoodDBEntities();
+        private FoodEntities db = new FoodEntities();
 
         // GET: api/Cities
-        public IQueryable<City> GetCity()
+        public List<Models.City> GetCity()
         {
-            return db.City;
+            return Models.City.ToCityList(db.City);
         }
 
         // GET: api/Cities/5
-        [ResponseType(typeof(City))]
+        [ResponseType(typeof(Models.City))]
         public IHttpActionResult GetCity(int id)
         {
             City city = db.City.Find(id);
@@ -32,7 +33,7 @@ namespace FoodAPI.Controllers
                 return NotFound();
             }
 
-            return Ok(city);
+            return Ok(new Models.City(city));
         }
 
         // PUT: api/Cities/5
@@ -43,7 +44,6 @@ namespace FoodAPI.Controllers
             {
                 return BadRequest(ModelState);
             }
-
             if (id != city.Id)
             {
                 return BadRequest();
