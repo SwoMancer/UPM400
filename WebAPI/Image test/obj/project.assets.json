@@ -27,20 +27,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Administrator\\.nuget\\packages\\": {}
+    "C:\\Users\\adamj\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Openssl\\UPM400\\WebAPI\\Image test\\Image test.csproj",
+      "projectUniqueName": "C:\\Users\\adamj\\UPM400\\WebAPI\\Image test\\Image test.csproj",
       "projectName": "Image test",
-      "projectPath": "E:\\Openssl\\UPM400\\WebAPI\\Image test\\Image test.csproj",
-      "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\Openssl\\UPM400\\WebAPI\\Image test\\obj\\",
+      "projectPath": "C:\\Users\\adamj\\UPM400\\WebAPI\\Image test\\Image test.csproj",
+      "packagesPath": "C:\\Users\\adamj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\adamj\\UPM400\\WebAPI\\Image test\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\adamj\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -51,9 +56,10 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Openssl\\UPM400\\WebAPI\\FlickerAPI\\FlickerAPI.csproj": {
-              "projectPath": "E:\\Openssl\\UPM400\\WebAPI\\FlickerAPI\\FlickerAPI.csproj"
+            "C:\\Users\\adamj\\UPM400\\WebAPI\\FlickerAPI\\FlickerAPI.csproj": {
+              "projectPath": "C:\\Users\\adamj\\UPM400\\WebAPI\\FlickerAPI\\FlickerAPI.csproj"
             }
           }
         }
@@ -66,6 +72,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "imports": [
           "net461",
           "net462",
@@ -81,7 +88,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
