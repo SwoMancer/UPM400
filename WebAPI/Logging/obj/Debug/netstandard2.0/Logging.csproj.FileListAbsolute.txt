@@ -1,9 +1,0 @@
-E:\Openssl\UPM400\WebAPI\Logging\bin\Debug\netstandard2.0\Logging.deps.json
-E:\Openssl\UPM400\WebAPI\Logging\bin\Debug\netstandard2.0\Logging.dll
-E:\Openssl\UPM400\WebAPI\Logging\bin\Debug\netstandard2.0\Logging.pdb
-E:\Openssl\UPM400\WebAPI\Logging\obj\Debug\netstandard2.0\Logging.csprojAssemblyReference.cache
-E:\Openssl\UPM400\WebAPI\Logging\obj\Debug\netstandard2.0\Logging.AssemblyInfoInputs.cache
-E:\Openssl\UPM400\WebAPI\Logging\obj\Debug\netstandard2.0\Logging.AssemblyInfo.cs
-E:\Openssl\UPM400\WebAPI\Logging\obj\Debug\netstandard2.0\Logging.dll
-E:\Openssl\UPM400\WebAPI\Logging\obj\Debug\netstandard2.0\Logging.pdb
-E:\Openssl\UPM400\WebAPI\Logging\obj\Debug\netstandard2.0\Logging.csproj.CoreCompileInputs.cache
