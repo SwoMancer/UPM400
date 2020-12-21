@@ -1,3 +1,7 @@
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Reflection.Metadata.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Xml.XPath.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\vbc.rsp
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FoodWebAPI.dll.config
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FoodWebAPI.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FoodWebAPI.pdb
@@ -8,7 +12,6 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\csi.exe
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\csi.exe.config
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\csi.rsp
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
@@ -32,7 +35,6 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.IO.FileSystem.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.IO.FileSystem.Primitives.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Net.Http.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Net.Sockets.dll
-E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Reflection.Metadata.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
@@ -43,11 +45,9 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Threading.Tasks.Extens
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.ValueTuple.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Xml.ReaderWriter.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Xml.XmlDocument.dll
-E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Xml.XPath.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Xml.XPath.XDocument.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\vbc.exe
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\vbc.exe.config
-E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\vbc.rsp
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\VBCSCompiler.exe
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\VBCSCompiler.exe.config
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\Antlr3.Runtime.dll
@@ -87,3 +87,5 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Release\FoodWebAPI.csproj.CoreCompil
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Release\FoodWebAPI.csproj.CopyComplete
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Release\FoodWebAPI.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Release\FoodWebAPI.pdb
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FlickerAPIClient.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FlickerAPIClient.pdb

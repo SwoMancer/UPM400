@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using FoodWebAPI.DB;
+using FoodWebAPI.Models;
 
 namespace FoodWebAPI.Controllers
 {
@@ -18,27 +19,48 @@ namespace FoodWebAPI.Controllers
         private FoodDBEntities db = new FoodDBEntities();
 
         // GET: /Foods
-        public IQueryable<Food> GetFood()
+        [ResponseType(typeof(List<Models.FoodImg>))]
+        public async Task<IHttpActionResult> GetFood()
         {
-            return db.Food;
+            IQueryable<DB.Food> foods = db.Food;
+            List<Models.FoodImg> mFoods = Models.FoodImg.ToFoodList(foods.ToList());
+            List<Task> tasks = new List<Task>();
+
+            //Hittar alla bilder
+            for (int i = 0; i < mFoods.Count; i++)
+            {
+                Task task = mFoods[i].getImages();
+                tasks.Add(task);
+            }
+
+            //Väntar på det...
+
+            for (int i = 0; i < tasks.Count; i++)
+            {
+                await tasks[i];
+            }
+
+            return Ok(mFoods);
         }
 
         // GET: /Foods/5
-        [ResponseType(typeof(Food))]
+        [ResponseType(typeof(Models.FoodImg))]
         public async Task<IHttpActionResult> GetFood(int id)
         {
-            Food food = await db.Food.FindAsync(id);
+            Models.FoodImg food = Models.FoodImg.ToFood(await db.Food.FindAsync(id));
             if (food == null)
             {
                 return NotFound();
             }
 
-            return Ok(food);
+            await food.getImages();
+
+            return Ok(Models.FoodImg.ToFood(food));
         }
 
         // PUT: /Foods/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutFood(int id, Food food)
+        public async Task<IHttpActionResult> PutFood(int id, DB.Food food)
         {
             if (!ModelState.IsValid)
             {
@@ -72,8 +94,8 @@ namespace FoodWebAPI.Controllers
         }
 
         // POST: /Foods
-        [ResponseType(typeof(Food))]
-        public async Task<IHttpActionResult> PostFood(Food food)
+        [ResponseType(typeof(Models.FoodImg))]
+        public async Task<IHttpActionResult> PostFood(DB.Food food)
         {
             if (!ModelState.IsValid)
             {
@@ -81,25 +103,33 @@ namespace FoodWebAPI.Controllers
             }
 
             db.Food.Add(food);
-            await db.SaveChangesAsync();
+            Models.FoodImg imgFood = Models.FoodImg.ToFood(food);
+            Task imgCallTask = imgFood.getImages();
 
-            return CreatedAtRoute("DefaultApi", new { id = food.Id }, food);
+            await db.SaveChangesAsync();
+            await imgCallTask;
+
+            return CreatedAtRoute("DefaultApi", new { id = food.Id }, imgFood);
         }
 
         // DELETE: /Foods/5
-        [ResponseType(typeof(Food))]
+        [ResponseType(typeof(Models.FoodImg))]
         public async Task<IHttpActionResult> DeleteFood(int id)
         {
-            Food food = await db.Food.FindAsync(id);
+            DB.Food food = await db.Food.FindAsync(id);
             if (food == null)
             {
                 return NotFound();
             }
 
+            Models.FoodImg imgFood = Models.FoodImg.ToFood(food);
+            Task imgCallTask = imgFood.getImages();
+
             db.Food.Remove(food);
             await db.SaveChangesAsync();
+            await imgCallTask;
 
-            return Ok(food);
+            return Ok(Models.FoodImg.ToFood(imgFood));
         }
 
         protected override void Dispose(bool disposing)

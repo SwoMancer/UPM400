@@ -1,0 +1,12 @@
+E:\Openssl\UPM400\FoodWebAPI\TestClient\bin\Debug\TestClient.exe.config
+E:\Openssl\UPM400\FoodWebAPI\TestClient\bin\Debug\TestClient.exe
+E:\Openssl\UPM400\FoodWebAPI\TestClient\bin\Debug\TestClient.pdb
+E:\Openssl\UPM400\FoodWebAPI\TestClient\bin\Debug\FlickerAPIClient.dll
+E:\Openssl\UPM400\FoodWebAPI\TestClient\bin\Debug\FlickerAPIClient.pdb
+E:\Openssl\UPM400\FoodWebAPI\TestClient\obj\Debug\TestClient.csprojAssemblyReference.cache
+E:\Openssl\UPM400\FoodWebAPI\TestClient\obj\Debug\TestClient.csproj.CoreCompileInputs.cache
+E:\Openssl\UPM400\FoodWebAPI\TestClient\obj\Debug\TestClient.csproj.CopyComplete
+E:\Openssl\UPM400\FoodWebAPI\TestClient\obj\Debug\TestClient.exe
+E:\Openssl\UPM400\FoodWebAPI\TestClient\obj\Debug\TestClient.pdb
+E:\Openssl\UPM400\FoodWebAPI\TestClient\bin\Debug\Newtonsoft.Json.dll
+E:\Openssl\UPM400\FoodWebAPI\TestClient\bin\Debug\Newtonsoft.Json.xml
