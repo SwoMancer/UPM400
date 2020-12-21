@@ -17,13 +17,13 @@ namespace FoodWebAPI.Controllers
     {
         private FoodDBEntities db = new FoodDBEntities();
 
-        // GET: api/Cities
+        // GET: /Cities
         public IQueryable<City> GetCity()
         {
             return db.City;
         }
 
-        // GET: api/Cities/5
+        // GET: /Cities/5
         [ResponseType(typeof(City))]
         public async Task<IHttpActionResult> GetCity(int id)
         {
@@ -71,7 +71,7 @@ namespace FoodWebAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Cities
+        // POST: /Cities
         [ResponseType(typeof(City))]
         public async Task<IHttpActionResult> PostCity(City city)
         {
@@ -86,7 +86,7 @@ namespace FoodWebAPI.Controllers
             return CreatedAtRoute("DefaultApi", new { id = city.Id }, city);
         }
 
-        // DELETE: api/Cities/5
+        // DELETE: /Cities/5
         [ResponseType(typeof(City))]
         public async Task<IHttpActionResult> DeleteCity(int id)
         {

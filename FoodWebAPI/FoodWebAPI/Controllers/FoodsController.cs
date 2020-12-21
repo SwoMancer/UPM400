@@ -17,13 +17,13 @@ namespace FoodWebAPI.Controllers
     {
         private FoodDBEntities db = new FoodDBEntities();
 
-        // GET: api/Foods
+        // GET: /Foods
         public IQueryable<Food> GetFood()
         {
             return db.Food;
         }
 
-        // GET: api/Foods/5
+        // GET: /Foods/5
         [ResponseType(typeof(Food))]
         public async Task<IHttpActionResult> GetFood(int id)
         {
@@ -36,7 +36,7 @@ namespace FoodWebAPI.Controllers
             return Ok(food);
         }
 
-        // PUT: api/Foods/5
+        // PUT: /Foods/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutFood(int id, Food food)
         {
@@ -71,7 +71,7 @@ namespace FoodWebAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Foods
+        // POST: /Foods
         [ResponseType(typeof(Food))]
         public async Task<IHttpActionResult> PostFood(Food food)
         {
@@ -86,7 +86,7 @@ namespace FoodWebAPI.Controllers
             return CreatedAtRoute("DefaultApi", new { id = food.Id }, food);
         }
 
-        // DELETE: api/Foods/5
+        // DELETE: /Foods/5
         [ResponseType(typeof(Food))]
         public async Task<IHttpActionResult> DeleteFood(int id)
         {
