@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "y8Jz+ciSyL9ADDigrgK4pSKQao2v5NCGgTGwumCKZ2vaKmYGbeen1ICqZWVIs/cTw0NOmtuZRHJoh9bp+JXMVQ==",
+  "dgSpecHash": "tHoqmpeg3ttnVV6b4SAV42LfjqaWLSsTIphhBB58wgeM16u+kX7pu2YKH0mWK1xmA79TgkpSLucEbZMH+mQWfg==",
   "success": true,
-  "projectFilePath": "G:\\Github\\UPM400\\WebAPI\\FlickerAPI\\FlickerAPI.csproj",
+  "projectFilePath": "E:\\Openssl\\UPM400\\WebAPI\\FlickerAPI\\FlickerAPI.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\gwred\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\gwred\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }
