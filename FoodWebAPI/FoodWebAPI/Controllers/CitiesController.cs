@@ -71,6 +71,11 @@ namespace FoodWebAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
+        public City Putcity()
+        {
+            throw new NotImplementedException();
+        }
+
         // POST: /Cities
         [ResponseType(typeof(City))]
         public async Task<IHttpActionResult> PostCity(City city)

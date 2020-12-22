@@ -19,11 +19,11 @@ namespace FoodWebAPI.Controllers
         private FoodDBEntities db = new FoodDBEntities();
 
         // GET: /Foods
-        [ResponseType(typeof(List<Models.FoodImg>))]
+        [ResponseType(typeof(List<FoodImg>))]
         public async Task<IHttpActionResult> GetFood()
         {
-            IQueryable<DB.Food> foods = db.Food;
-            List<Models.FoodImg> mFoods = Models.FoodImg.ToFoodList(foods.ToList());
+            IQueryable<Food> foods = db.Food;
+            List<FoodImg> mFoods = FoodImg.ToFoodList(foods.ToList());
             List<Task> tasks = new List<Task>();
 
             //Hittar alla bilder
@@ -50,8 +50,8 @@ namespace FoodWebAPI.Controllers
             if (db.Restaurant.Contains(restaurant))
                 return Ok(new List<FoodImg>());
 
-            List<DB.Food> foods = await db.Food.Where(r => r.Id_Restaurant == restaurant.Id).ToListAsync();
-            List<Models.FoodImg> mFoods = Models.FoodImg.ToFoodList(foods);
+            List<Food> foods = await db.Food.Where(r => r.Id_Restaurant == restaurant.Id).ToListAsync();
+            List<FoodImg> mFoods = FoodImg.ToFoodList(foods);
             List<Task> tasks = new List<Task>();
 
             //Hittar alla bilder
@@ -72,10 +72,10 @@ namespace FoodWebAPI.Controllers
         }
 
         // GET: /Foods/5
-        [ResponseType(typeof(Models.FoodImg))]
+        [ResponseType(typeof(FoodImg))]
         public async Task<IHttpActionResult> GetFood(int id)
         {
-            Models.FoodImg food = Models.FoodImg.ToFood(await db.Food.FindAsync(id));
+            FoodImg food = FoodImg.ToFood(await db.Food.FindAsync(id));
             if (food == null)
             {
                 return NotFound();
@@ -83,7 +83,7 @@ namespace FoodWebAPI.Controllers
 
             await food.getImages();
 
-            return Ok(Models.FoodImg.ToFood(food));
+            return Ok(FoodImg.ToFood(food));
         }
 
         // PUT: /Foods/5
@@ -122,8 +122,8 @@ namespace FoodWebAPI.Controllers
         }
 
         // POST: /Foods
-        [ResponseType(typeof(Models.FoodImg))]
-        public async Task<IHttpActionResult> PostFood(DB.Food food)
+        [ResponseType(typeof(FoodImg))]
+        public async Task<IHttpActionResult> PostFood(Food food)
         {
             if (!ModelState.IsValid)
             {
@@ -131,7 +131,7 @@ namespace FoodWebAPI.Controllers
             }
 
             db.Food.Add(food);
-            Models.FoodImg imgFood = Models.FoodImg.ToFood(food);
+            FoodImg imgFood = FoodImg.ToFood(food);
             Task imgCallTask = imgFood.getImages();
 
             await db.SaveChangesAsync();
@@ -141,23 +141,23 @@ namespace FoodWebAPI.Controllers
         }
 
         // DELETE: /Foods/5
-        [ResponseType(typeof(Models.FoodImg))]
+        [ResponseType(typeof(FoodImg))]
         public async Task<IHttpActionResult> DeleteFood(int id)
         {
-            DB.Food food = await db.Food.FindAsync(id);
+            Food food = await db.Food.FindAsync(id);
             if (food == null)
             {
                 return NotFound();
             }
 
-            Models.FoodImg imgFood = Models.FoodImg.ToFood(food);
+            FoodImg imgFood = FoodImg.ToFood(food);
             Task imgCallTask = imgFood.getImages();
 
             db.Food.Remove(food);
             await db.SaveChangesAsync();
             await imgCallTask;
 
-            return Ok(Models.FoodImg.ToFood(imgFood));
+            return Ok(FoodImg.ToFood(imgFood));
         }
 
         protected override void Dispose(bool disposing)
