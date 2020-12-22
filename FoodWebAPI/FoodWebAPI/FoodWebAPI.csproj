@@ -211,7 +211,7 @@
     <Compile Include="DB\Restaurant.cs">
       <DependentUpon>FoodDBModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Food.cs" />
+    <Compile Include="Models\FoodImg.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -320,6 +320,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlickerAPIClient\FlickerAPIClient.csproj">
+      <Project>{0b9ca405-3534-4081-8fd7-83d29857b044}</Project>
+      <Name>FlickerAPIClient</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

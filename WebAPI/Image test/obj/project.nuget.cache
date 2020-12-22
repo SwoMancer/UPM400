@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ybryVCjnYshrFfGc/JLmdvcxxiz9X2aWcdVLXX/SEdVPy275yKcqPuNNViGSbnX9SPIIEt8SxKahaXEEaItpYA==",
+  "dgSpecHash": "aXbR2Y7Ziyr0bteo0e4M46lh8ec2b1eD9lI4Z3YQuKXqR+FgVdmhtT4xBUPnTHsgXC1HREnHkQvhZ8g+lshaSg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adamj\\UPM400\\WebAPI\\Image test\\Image test.csproj",
+  "projectFilePath": "E:\\Openssl\\UPM400\\WebAPI\\Image test\\Image test.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
