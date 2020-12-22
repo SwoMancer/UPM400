@@ -101,7 +101,25 @@ namespace FoodWebAPI.Controllers
 
             return Ok(ingredient);
         }
+        /*
+        // POST: /Ingredients/
+        [ResponseType(typeof(List<Ingredient>))]
+        public async Task<IHttpActionResult> PostIngredients(List<Ingredient> ingredients)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
+            if (ingredients.Count <= 0)
+                return Ok(ingredients);
+
+            foreach (Ingredient ingredient in ingredients)
+                db.Ingredient.Add(ingredient);
+
+            await db.SaveChangesAsync();
+
+            return Ok(ingredients);
+        }
+        */
         protected override void Dispose(bool disposing)
         {
             if (disposing)
