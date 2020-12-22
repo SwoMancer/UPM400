@@ -43,6 +43,34 @@ namespace FoodWebAPI.Controllers
             return Ok(mFoods);
         }
 
+        // GET: /Foods
+        [ResponseType(typeof(List<FoodImg>))]
+        public async Task<IHttpActionResult> GetFood(Restaurant restaurant)
+        {
+            if (db.Restaurant.Contains(restaurant))
+                return Ok(new List<FoodImg>());
+
+            List<DB.Food> foods = await db.Food.Where(r => r.Id_Restaurant == restaurant.Id).ToListAsync();
+            List<Models.FoodImg> mFoods = Models.FoodImg.ToFoodList(foods);
+            List<Task> tasks = new List<Task>();
+
+            //Hittar alla bilder
+            for (int i = 0; i < mFoods.Count; i++)
+            {
+                Task task = mFoods[i].getImages();
+                tasks.Add(task);
+            }
+
+            //Väntar på det...
+
+            for (int i = 0; i < tasks.Count; i++)
+            {
+                await tasks[i];
+            }
+
+            return Ok(mFoods);
+        }
+
         // GET: /Foods/5
         [ResponseType(typeof(Models.FoodImg))]
         public async Task<IHttpActionResult> GetFood(int id)
