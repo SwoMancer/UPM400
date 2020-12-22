@@ -4,7 +4,7 @@ using System;
 namespace FoodWebAPITests
 {
     [TestClass]
-    public class UnitTest1
+    public class APITest
     {
         [TestMethod]
         public void TestMethod1()
