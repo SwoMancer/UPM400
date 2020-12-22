@@ -1,8 +1,0 @@
-G:\Github\UPM400\WebAPI\FlickerAPI\obj\Release\netstandard2.0\FlickerAPI.AssemblyInfoInputs.cache
-G:\Github\UPM400\WebAPI\FlickerAPI\obj\Release\netstandard2.0\FlickerAPI.AssemblyInfo.cs
-G:\Github\UPM400\WebAPI\FlickerAPI\obj\Release\netstandard2.0\FlickerAPI.csproj.CoreCompileInputs.cache
-G:\Github\UPM400\WebAPI\FlickerAPI\bin\Release\netstandard2.0\FlickerAPI.deps.json
-G:\Github\UPM400\WebAPI\FlickerAPI\bin\Release\netstandard2.0\FlickerAPI.dll
-G:\Github\UPM400\WebAPI\FlickerAPI\bin\Release\netstandard2.0\FlickerAPI.pdb
-G:\Github\UPM400\WebAPI\FlickerAPI\obj\Release\netstandard2.0\FlickerAPI.dll
-G:\Github\UPM400\WebAPI\FlickerAPI\obj\Release\netstandard2.0\FlickerAPI.pdb

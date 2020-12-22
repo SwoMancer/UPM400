@@ -123,7 +123,7 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Foods
         [ResponseType(typeof(Models.FoodImg))]
-        public async Task<IHttpActionResult> PostFood(DB.Food food)
+        public async Task<IHttpActionResult> PutFood(DB.Food food)
         {
             if (!ModelState.IsValid)
             {
