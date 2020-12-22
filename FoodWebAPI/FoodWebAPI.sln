@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodWebAPI", "FoodWebAPI\Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodWebAPITests", "FoodWebAPITests\FoodWebAPITests.csproj", "{33866BFD-7A4E-42C9-8AD4-212221BB3041}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlickerAPIClient", "FlickerAPIClient\FlickerAPIClient.csproj", "{44E1A767-A724-45FD-A755-6927C8A97E4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlickerAPIClient", "FlickerAPIClient\FlickerAPIClient.csproj", "{E4B62EC4-A6BC-4758-BD7B-0F05479097CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{33866BFD-7A4E-42C9-8AD4-212221BB3041}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33866BFD-7A4E-42C9-8AD4-212221BB3041}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33866BFD-7A4E-42C9-8AD4-212221BB3041}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44E1A767-A724-45FD-A755-6927C8A97E4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44E1A767-A724-45FD-A755-6927C8A97E4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44E1A767-A724-45FD-A755-6927C8A97E4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44E1A767-A724-45FD-A755-6927C8A97E4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4B62EC4-A6BC-4758-BD7B-0F05479097CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4B62EC4-A6BC-4758-BD7B-0F05479097CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4B62EC4-A6BC-4758-BD7B-0F05479097CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4B62EC4-A6BC-4758-BD7B-0F05479097CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
