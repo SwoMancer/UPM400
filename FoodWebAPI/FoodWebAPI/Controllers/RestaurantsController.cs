@@ -17,7 +17,7 @@ namespace FoodWebAPI.Controllers
     {
         private FoodDBEntities db = new FoodDBEntities();
 
-        // GET: /Restaurants
+        // GET: /Restaurants/
         public IQueryable<Restaurant> GetRestaurant()
         {
             return db.Restaurant;
@@ -35,21 +35,7 @@ namespace FoodWebAPI.Controllers
 
             return Ok(restaurant);
         }
-
-        // GET: /Restaurants/5
-        [ResponseType(typeof(List<Restaurant>))]
-        public async Task<IHttpActionResult> GetRestaurant(City city)
-        {
-            List<Restaurant> restaurants = await db.Restaurant.Where(c => c.Id_City == city.Id).ToListAsync();
-            
-            if (restaurants is null || restaurants.Count <= 0)
-            {
-                return NotFound();
-            }
-
-            return Ok(restaurants);
-        }
-
+       
         // PUT: /Restaurants/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutRestaurant(int id, Restaurant restaurant)
@@ -85,7 +71,7 @@ namespace FoodWebAPI.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: /Restaurants
+        // POST: /Restaurants/
         [ResponseType(typeof(Restaurant))]
         public async Task<IHttpActionResult> PostRestaurant(Restaurant restaurant)
         {
@@ -115,7 +101,21 @@ namespace FoodWebAPI.Controllers
 
             return Ok(restaurant);
         }
+        /*
+        // POST: /Restaurants/
+        [ResponseType(typeof(List<Restaurant>))]
+        public async Task<IHttpActionResult> GetRestaurant(City city)
+        {
+            List<Restaurant> restaurants = await db.Restaurant.Where(c => c.Id_City == city.Id).ToListAsync();
+            
+            if (restaurants is null || restaurants.Count <= 0)
+            {
+                return NotFound();
+            }
 
+            return Ok(restaurants);
+        }
+        */
         protected override void Dispose(bool disposing)
         {
             if (disposing)
