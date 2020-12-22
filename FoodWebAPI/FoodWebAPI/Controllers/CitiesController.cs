@@ -18,6 +18,9 @@ namespace FoodWebAPI.Controllers
         private FoodDBEntities db = new FoodDBEntities();
 
         // GET: /Cities
+        /// <summary>
+        /// See if the customer's card is valid
+        /// </summary>
         public IQueryable<City> GetCity()
         {
             return db.City;
