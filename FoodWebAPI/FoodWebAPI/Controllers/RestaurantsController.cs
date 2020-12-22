@@ -36,6 +36,20 @@ namespace FoodWebAPI.Controllers
             return Ok(restaurant);
         }
 
+        // GET: /Restaurants/5
+        [ResponseType(typeof(List<Restaurant>))]
+        public async Task<IHttpActionResult> GetRestaurant(City city)
+        {
+            List<Restaurant> restaurants = await db.Restaurant.Where(c => c.Id_City == city.Id).ToListAsync();
+            
+            if (restaurants is null || restaurants.Count <= 0)
+            {
+                return NotFound();
+            }
+
+            return Ok(restaurants);
+        }
+
         // PUT: /Restaurants/5
         [ResponseType(typeof(void))]
         public async Task<IHttpActionResult> PutRestaurant(int id, Restaurant restaurant)
