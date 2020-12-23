@@ -44,7 +44,7 @@ namespace FoodWebAPITests
         }
 
         [TestMethod]
-        public async void Put_FoodAsync()
+        public async void Put_Food()
         {
             //Arrange 
             string Name = "";

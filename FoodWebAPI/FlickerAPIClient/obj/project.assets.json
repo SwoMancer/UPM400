@@ -221,29 +221,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gwred\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\adamj\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Github\\UPM400\\FoodWebAPI\\FlickerAPIClient\\FlickerAPIClient.csproj",
+      "projectUniqueName": "C:\\Users\\adamj\\UPM400\\FoodWebAPI\\FlickerAPIClient\\FlickerAPIClient.csproj",
       "projectName": "FlickerAPIClient",
-      "projectPath": "G:\\Github\\UPM400\\FoodWebAPI\\FlickerAPIClient\\FlickerAPIClient.csproj",
-      "packagesPath": "C:\\Users\\gwred\\.nuget\\packages\\",
-      "outputPath": "G:\\Github\\UPM400\\FoodWebAPI\\FlickerAPIClient\\obj\\",
+      "projectPath": "C:\\Users\\adamj\\UPM400\\FoodWebAPI\\FlickerAPIClient\\FlickerAPIClient.csproj",
+      "packagesPath": "C:\\Users\\adamj\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\adamj\\UPM400\\FoodWebAPI\\FlickerAPIClient\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "G:\\user\\GabrielWrede\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\adamj\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
