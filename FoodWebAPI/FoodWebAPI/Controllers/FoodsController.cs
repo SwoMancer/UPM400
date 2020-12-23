@@ -22,27 +22,9 @@ namespace FoodWebAPI.Controllers
         [ResponseType(typeof(List<FoodImg>))]
         public async Task<IHttpActionResult> GetFood()
         {
-            IQueryable<Food> foods = db.Food;
-            List<FoodImg> mFoods = FoodImg.ToFoodList(foods.ToList());
-            List<Task> tasks = new List<Task>();
-
-            //Hittar alla bilder
-            for (int i = 0; i < mFoods.Count; i++)
-            {
-                Task task = mFoods[i].getImages();
-                tasks.Add(task);
-            }
-
-            //Väntar på det...
-
-            for (int i = 0; i < tasks.Count; i++)
-            {
-                await tasks[i];
-            }
-
+            List<FoodImg> mFoods = await Containers.FoodBlock.GetFood();
             return Ok(mFoods);
         }
-
         // GET: /Foods
         [ResponseType(typeof(List<FoodImg>))]
         public async Task<IHttpActionResult> GetFood(Restaurant restaurant)
@@ -50,24 +32,7 @@ namespace FoodWebAPI.Controllers
             if (db.Restaurant.Contains(restaurant))
                 return Ok(new List<FoodImg>());
 
-            List<Food> foods = await db.Food.Where(r => r.Id_Restaurant == restaurant.Id).ToListAsync();
-            List<FoodImg> mFoods = FoodImg.ToFoodList(foods);
-            List<Task> tasks = new List<Task>();
-
-            //Hittar alla bilder
-            for (int i = 0; i < mFoods.Count; i++)
-            {
-                Task task = mFoods[i].getImages();
-                tasks.Add(task);
-            }
-
-            //Väntar på det...
-
-            for (int i = 0; i < tasks.Count; i++)
-            {
-                await tasks[i];
-            }
-
+            List<FoodImg> mFoods = await Containers.FoodBlock.GetFood(restaurant);
             return Ok(mFoods);
         }
 
@@ -75,14 +40,12 @@ namespace FoodWebAPI.Controllers
         [ResponseType(typeof(FoodImg))]
         public async Task<IHttpActionResult> GetFood(int id)
         {
-            FoodImg food = FoodImg.ToFood(await db.Food.FindAsync(id));
+            FoodImg food = await Containers.FoodBlock.GetFood(id);
+
             if (food == null)
-            {
                 return NotFound();
-            }
 
             await food.getImages();
-
             return Ok(FoodImg.ToFood(food));
         }
 
@@ -91,15 +54,11 @@ namespace FoodWebAPI.Controllers
         public async Task<IHttpActionResult> PutFood(int id, DB.Food food)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
-
+            
             if (id != food.Id)
-            {
                 return BadRequest();
-            }
-
+    
             db.Entry(food).State = EntityState.Modified;
 
             try
@@ -126,17 +85,9 @@ namespace FoodWebAPI.Controllers
         public async Task<IHttpActionResult> PostFood(Food food)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            db.Food.Add(food);
-            FoodImg imgFood = FoodImg.ToFood(food);
-            Task imgCallTask = imgFood.getImages();
-
-            await db.SaveChangesAsync();
-            await imgCallTask;
-
+            FoodImg imgFood = await Containers.FoodBlock.PostFood(food);
             return CreatedAtRoute("DefaultApi", new { id = food.Id }, imgFood);
         }
 
@@ -146,17 +97,9 @@ namespace FoodWebAPI.Controllers
         {
             Food food = await db.Food.FindAsync(id);
             if (food == null)
-            {
                 return NotFound();
-            }
 
-            FoodImg imgFood = FoodImg.ToFood(food);
-            Task imgCallTask = imgFood.getImages();
-
-            db.Food.Remove(food);
-            await db.SaveChangesAsync();
-            await imgCallTask;
-
+            FoodImg imgFood = await Containers.FoodBlock.DeleteFood(food);
             return Ok(FoodImg.ToFood(imgFood));
         }
 
