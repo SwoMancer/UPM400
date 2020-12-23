@@ -11,9 +11,13 @@ namespace FoodWebAPI.Controllers
     public class CardController : ApiController
     {
         // GET api/values/5
-        public Answer Post(Card cardInfo)
+        /// <summary>
+        /// See if the customer's card is valid
+        /// </summary>
+        /// <param name="card">The card that requires validation.</param>
+        public Answer Post(Card card)
         {
-            return cardInfo.IsCardValid();
+            return card.IsCardValid();
         }
     }
 }
