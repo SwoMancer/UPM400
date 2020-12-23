@@ -69,6 +69,17 @@ namespace FoodWebAPI.Containers
 
             return imgFood;
         }
+        public static async Task<FoodImg> PutFood(Food food)
+        {
+            var item = db.Food.Find(food);
+            item.Name = food.Name;
+
+            FoodImg imgFood = FoodImg.ToFood(food);
+
+            await db.SaveChangesAsync();
+
+            return imgFood;
+        }
         public static async Task<FoodImg> DeleteFood(Food food)
         {
             FoodImg imgFood = FoodImg.ToFood(food);
