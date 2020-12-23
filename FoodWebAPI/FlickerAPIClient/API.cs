@@ -14,7 +14,7 @@ namespace FlickerAPIClient
 
         //https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=08f3783f96193a84c4cb52e595c7fdcb&text=pizza+food&sort=interestingness-desc&privacy_filter=1&safe_search=1&content_type=1&format=json&nojsoncallback=1
 
-        public static async Task<Answer> GetAllRaw(string foodItemName)
+        private static async Task<Answer> GetAllRaw(string foodItemName)
         {
             string url = "https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key="+API_KEY+"&text="+foodItemName+"&sort=interestingness-desc&privacy_filter=1&safe_search=1&content_type=1&format=json&nojsoncallback=1";
             try
@@ -40,6 +40,8 @@ namespace FlickerAPIClient
         }
         public static async Task<Answer> GetAll(string[] foodItemNames)
         {
+            InputValidation(foodItemNames);
+
             string foodItemName = string.Empty;
             foreach (string item in foodItemNames)
             {
@@ -65,6 +67,19 @@ namespace FlickerAPIClient
             answer = Answer.Complete(hrefs);
 
             return answer;
+        }
+        private static void InputValidation(string[] inputs)
+        {
+            if (inputs.Length == 0)
+                throw new ArgumentException("Input string[] can not be empty.");
+
+            foreach (string input in inputs)
+            {
+                if (string.IsNullOrEmpty(input))
+                    throw new ArgumentException("Values in input string[] can not be empty or null.");
+                if (string.IsNullOrWhiteSpace(input))
+                    throw new ArgumentException("Values in input string[] can not be white Spaces or null.");
+            }
         }
     }
 }

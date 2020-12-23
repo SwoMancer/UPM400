@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "7ZeDLkR1/+YdH2VKmRQ0TmqysbaIicGpS/on1diTpm2ANv1QnU4DHxYMUvtanJnDCGcWtlUEwoTk2f+5qPXkhA==",
+  "success": true,
+  "projectFilePath": "G:\\Github\\UPM400\\FoodWebAPI\\FlickerAPIClient\\FlickerAPIClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gwred\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\gwred\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\gwred\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -16,3 +16,12 @@ C:\Users\adamj\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\Flick
 C:\Users\adamj\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\FlickerAPIClient.csproj.CoreCompileInputs.cache
 C:\Users\adamj\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\FlickerAPIClient.dll
 C:\Users\adamj\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\FlickerAPIClient.pdb
+G:\Github\UPM400\FoodWebAPI\FlickerAPIClient\bin\Debug\netstandard2.0\FlickerAPIClient.deps.json
+G:\Github\UPM400\FoodWebAPI\FlickerAPIClient\bin\Debug\netstandard2.0\FlickerAPIClient.dll
+G:\Github\UPM400\FoodWebAPI\FlickerAPIClient\bin\Debug\netstandard2.0\FlickerAPIClient.pdb
+G:\Github\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\FlickerAPIClient.AssemblyInfoInputs.cache
+G:\Github\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\FlickerAPIClient.AssemblyInfo.cs
+G:\Github\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\FlickerAPIClient.csproj.CoreCompileInputs.cache
+G:\Github\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\FlickerAPIClient.dll
+G:\Github\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\FlickerAPIClient.pdb
+G:\Github\UPM400\FoodWebAPI\FlickerAPIClient\obj\Debug\netstandard2.0\FlickerAPIClient.csprojAssemblyReference.cache
