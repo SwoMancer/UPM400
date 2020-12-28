@@ -25,6 +25,7 @@ namespace FoodWebAPI.Controllers
             List<FoodImg> mFoods = await Containers.FoodBlock.GetFood();
             return Ok(mFoods);
         }
+        /*
         // GET: /Foods
         [ResponseType(typeof(List<FoodImg>))]
         public async Task<IHttpActionResult> GetFood(Restaurant restaurant)
@@ -35,7 +36,7 @@ namespace FoodWebAPI.Controllers
             List<FoodImg> mFoods = await Containers.FoodBlock.GetFood(restaurant);
             return Ok(mFoods);
         }
-
+        */
         // GET: /Foods/5
         [ResponseType(typeof(FoodImg))]
         public async Task<IHttpActionResult> GetFood(int id)
@@ -51,15 +52,15 @@ namespace FoodWebAPI.Controllers
 
         // PUT: /Foods/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutFood(int id, DB.Food food)
+        public async Task<IHttpActionResult> PutFood(int id, Models.EasyInputs.EasyFood food)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            
-            if (id != food.Id)
-                return BadRequest();
-    
-            db.Entry(food).State = EntityState.Modified;
+
+            DB.Food foodDb = food.ToDBFood();
+            foodDb.Id = id;
+
+            db.Entry(foodDb).State = EntityState.Modified;
 
             try
             {
@@ -82,13 +83,19 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Foods
         [ResponseType(typeof(FoodImg))]
-        public async Task<IHttpActionResult> PostFood(Food food)
+        public async Task<IHttpActionResult> PostFood(Models.EasyInputs.EasyFood food)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            FoodImg imgFood = await Containers.FoodBlock.PostFood(food);
-            return CreatedAtRoute("DefaultApi", new { id = food.Id }, imgFood);
+            DB.Food foodDb = db.Food
+                .Where(n => n.Name == food.Name)
+                .Where(i => i.Id_Restaurant == food.Id_Restaurant)
+                .Where(p => p.Price == food.Price)
+                .FirstOrDefault();
+
+            FoodImg imgFood = await Containers.FoodBlock.PostFood(foodDb);
+            return CreatedAtRoute("DefaultApi", new { id = imgFood.Id }, imgFood);
         }
 
         // DELETE: /Foods/5

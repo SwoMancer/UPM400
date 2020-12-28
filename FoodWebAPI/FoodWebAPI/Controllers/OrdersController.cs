@@ -38,19 +38,16 @@ namespace FoodWebAPI.Controllers
 
         // PUT: /Orders/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutOrder(int id, Order order)
+        public async Task<IHttpActionResult> PutOrder(int id, Models.EasyInputs.EasyOrder order)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            if (id != order.Id)
-            {
-                return BadRequest();
-            }
 
-            db.Entry(order).State = EntityState.Modified;
+            DB.Order orderDb = order.ToDBOrder();
+            orderDb.Id = id;
+
+            db.Entry(orderDb).State = EntityState.Modified;
 
             try
             {
@@ -73,17 +70,26 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Orders
         [ResponseType(typeof(Order))]
-        public async Task<IHttpActionResult> PostOrder(Order order)
+        public async Task<IHttpActionResult> PostOrder(Models.EasyInputs.EasyOrder order)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
+            
 
-            db.Order.Add(order);
+            db.Order.Add(order.ToDBOrder());
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = order.Id }, order);
+            DB.Order orderDb = db.Order
+                .Where(c => c.Id_City == order.Id_City)
+                .Where(c => c.CustomerAdress == order.CustomerAdress)
+                .Where(c => c.CustomerEmail == order.CustomerEmail)
+                .Where(c => c.CustomerFirstName == order.CustomerFirstName)
+                .Where(c => c.CustomerLastName == order.CustomerLastName)
+                .Where(c => c.CustomerPhoneNumber == order.CustomerPhoneNumber)
+                .Where(c => c.CustomerZIP == order.CustomerZIP)
+                .FirstOrDefault();
+
+            return CreatedAtRoute("DefaultApi", new { id = orderDb.Id }, orderDb);
         }
 
         // DELETE: /Orders/5

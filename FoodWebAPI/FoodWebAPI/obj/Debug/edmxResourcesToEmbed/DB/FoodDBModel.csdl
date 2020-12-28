@@ -97,6 +97,8 @@
     <Property Name="Id_City" Type="Int32" />
     <NavigationProperty Name="City" Relationship="Self.FK_Restaurant_City" FromRole="Restaurant" ToRole="City" />
     <NavigationProperty Name="Food" Relationship="Self.FK_Food_Restaurant" FromRole="Restaurant" ToRole="Food" />
+    <Property Name="Adress" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Img" Type="Binary" MaxLength="256" FixedLength="false" />
   </EntityType>
   <Association Name="FK_Order_City">
     <End Role="City" Type="Self.City" Multiplicity="1" />

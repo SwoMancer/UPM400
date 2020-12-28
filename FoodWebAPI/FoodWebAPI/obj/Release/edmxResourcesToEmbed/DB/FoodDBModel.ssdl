@@ -45,7 +45,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="CreationTime" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="CreationTime" Type="binary" MaxLength="8" Nullable="false" StoreGeneratedPattern="Computed" />
     <Property Name="CustomerFirstName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="CustomerLastName" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="CustomerAdress" Type="varchar" MaxLength="50" Nullable="false" />
@@ -67,7 +67,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="CustomerMessage" Type="text" />
+    <Property Name="CustomerMessage" Type="varchar(max)" />
     <Property Name="Id_Order" Type="int" Nullable="false" />
     <Property Name="Id_Food" Type="int" Nullable="false" />
   </EntityType>
@@ -79,6 +79,8 @@
     <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="Popularity" Type="int" />
     <Property Name="Id_City" Type="int" />
+    <Property Name="Adress" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Img" Type="varbinary" MaxLength="256" />
   </EntityType>
   <Association Name="FK_Food_Restaurant">
     <End Role="Restaurant" Type="Self.Restaurant" Multiplicity="0..1" />

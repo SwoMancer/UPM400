@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using FoodWebAPI.DB;
+using FoodWebAPI.Models.EasyInputs;
 
 namespace FoodWebAPI.Controllers
 {
@@ -41,19 +42,15 @@ namespace FoodWebAPI.Controllers
 
         // PUT: api/Cities/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutCity(int id, City city)
+        public async Task<IHttpActionResult> PutCity(int id, EasyCity city)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
+            
+            DB.City cityDb = city.ToDBCity();
+            cityDb.Id = id;
 
-            if (id != city.Id)
-            {
-                return BadRequest();
-            }
-
-            db.Entry(city).State = EntityState.Modified;
+            db.Entry(cityDb).State = EntityState.Modified;
 
             try
             {
@@ -81,17 +78,17 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Cities
         [ResponseType(typeof(City))]
-        public async Task<IHttpActionResult> PostCity(City city)
+        public async Task<IHttpActionResult> PostCity([FromBody] EasyCity city)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            db.City.Add(city);
+            db.City.Add(city.ToDBCity());
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = city.Id }, city);
+            DB.City cityDb = db.City.Where(n => n.Name == city.Name).FirstOrDefault();
+
+            return CreatedAtRoute("DefaultApi", new { id = cityDb.Id }, cityDb);
         }
 
         // DELETE: /Cities/5

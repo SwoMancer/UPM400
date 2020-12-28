@@ -163,6 +163,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Containers\FoodBlock.cs" />
+    <Compile Include="Controllers\CardController.cs" />
     <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\DrinksController.cs" />
     <Compile Include="Controllers\FoodsController.cs" />
@@ -214,6 +215,12 @@
     </Compile>
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\EasyInputs\EasyCity.cs" />
+    <Compile Include="Models\EasyInputs\EasyDrink.cs" />
+    <Compile Include="Models\EasyInputs\EasyFood.cs" />
+    <Compile Include="Models\EasyInputs\EasyIngredient.cs" />
+    <Compile Include="Models\EasyInputs\EasyOrder.cs" />
+    <Compile Include="Models\EasyInputs\EasyRestaurant.cs" />
     <Compile Include="Models\FoodImg.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -231,6 +238,7 @@
       <LastGenOutput>FoodDBModel.Context.cs</LastGenOutput>
       <DependentUpon>FoodDBModel.edmx</DependentUpon>
     </Content>
+    <Content Include="DB\FoodDBModel.edmx.sql" />
     <Content Include="DB\FoodDBModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>FoodDBModel.edmx</DependentUpon>

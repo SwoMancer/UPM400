@@ -38,19 +38,15 @@ namespace FoodWebAPI.Controllers
 
         // PUT: /Drinks/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutDrink(int id, Drink drink)
+        public async Task<IHttpActionResult> PutDrink(int id, Models.EasyInputs.EasyDrink drink)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            if (id != drink.Id)
-            {
-                return BadRequest();
-            }
+            DB.Drink drinkDb = drink.ToDNDrink();
+            drinkDb.Id = id;
 
-            db.Entry(drink).State = EntityState.Modified;
+            db.Entry(drinkDb).State = EntityState.Modified;
 
             try
             {
@@ -73,17 +69,17 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Drinks
         [ResponseType(typeof(Drink))]
-        public async Task<IHttpActionResult> PostDrink(Drink drink)
+        public async Task<IHttpActionResult> PostDrink(Models.EasyInputs.EasyDrink drink)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            db.Drink.Add(drink);
+            db.Drink.Add(drink.ToDNDrink());
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = drink.Id }, drink);
+            DB.Drink drinkDb = db.Drink.Where(n => n.Name == drink.Name).FirstOrDefault();
+
+            return CreatedAtRoute("DefaultApi", new { id = drinkDb.Id }, drinkDb);
         }
 
         // DELETE: /Drinks/5

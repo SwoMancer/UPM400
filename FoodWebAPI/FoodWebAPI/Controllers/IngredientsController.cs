@@ -38,19 +38,15 @@ namespace FoodWebAPI.Controllers
 
         // PUT: /Ingredients/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutIngredient(int id, Ingredient ingredient)
+        public async Task<IHttpActionResult> PutIngredient(int id, Models.EasyInputs.EasyIngredient ingredient)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
 
-            if (id != ingredient.Id)
-            {
-                return BadRequest();
-            }
+            DB.Ingredient ingredientDb = ingredient.ToDBIngredient();
+            ingredientDb.Id = id;
 
-            db.Entry(ingredient).State = EntityState.Modified;
+            db.Entry(ingredientDb).State = EntityState.Modified;
 
             try
             {
@@ -73,17 +69,19 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Ingredients
         [ResponseType(typeof(Ingredient))]
-        public async Task<IHttpActionResult> PostIngredient(Ingredient ingredient)
+        public async Task<IHttpActionResult> PostIngredient(Models.EasyInputs.EasyIngredient ingredient)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
+            
 
-            db.Ingredient.Add(ingredient);
+            db.Ingredient.Add(ingredient.ToDBIngredient());
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = ingredient.Id }, ingredient);
+            DB.Ingredient ingredientDb = db.Ingredient.Where(n => n.Name == ingredient.Name).FirstOrDefault();
+
+
+            return CreatedAtRoute("DefaultApi", new { id = ingredientDb.Id }, ingredientDb);
         }
 
         // DELETE: /Ingredients/5

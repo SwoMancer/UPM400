@@ -24,6 +24,8 @@ namespace FoodWebAPI.DB
         public string Name { get; set; }
         public Nullable<int> Popularity { get; set; }
         public Nullable<int> Id_City { get; set; }
+        public string Adress { get; set; }
+        public byte[] Img { get; set; }
     
         public virtual City City { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

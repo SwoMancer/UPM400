@@ -38,19 +38,16 @@ namespace FoodWebAPI.Controllers
        
         // PUT: /Restaurants/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutRestaurant(int id, Restaurant restaurant)
+        public async Task<IHttpActionResult> PutRestaurant(int id, Models.EasyInputs.EasyRestaurant restaurant)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
+            
 
-            if (id != restaurant.Id)
-            {
-                return BadRequest();
-            }
+            DB.Restaurant restaurantDB = restaurant.ToDBRestaurant();
+            restaurantDB.Id = id;
 
-            db.Entry(restaurant).State = EntityState.Modified;
+            db.Entry(restaurantDB).State = EntityState.Modified;
 
             try
             {
@@ -73,17 +70,24 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Restaurants/
         [ResponseType(typeof(Restaurant))]
-        public async Task<IHttpActionResult> PostRestaurant(Restaurant restaurant)
+        public async Task<IHttpActionResult> PostRestaurant(Models.EasyInputs.EasyRestaurant restaurant)
         {
             if (!ModelState.IsValid)
-            {
                 return BadRequest(ModelState);
-            }
+           
 
-            db.Restaurant.Add(restaurant);
+            db.Restaurant.Add(restaurant.ToDBRestaurant());
             await db.SaveChangesAsync();
 
-            return CreatedAtRoute("DefaultApi", new { id = restaurant.Id }, restaurant);
+            DB.Restaurant restaurantDb = db.Restaurant
+                .Where(a => a.Adress == restaurant.Adress)
+                .Where(i => i.Id_City == restaurant.Id_City)
+                .Where(i => i.Img.Length == restaurant.Img.Length)
+                .Where(n => n.Name == restaurant.Name)
+                .Where(p => p.Popularity == restaurant.Popularity)
+                .FirstOrDefault();
+
+            return CreatedAtRoute("DefaultApi", new { Name = restaurantDb.Id }, restaurantDb);
         }
 
         // DELETE: /Restaurants/5
