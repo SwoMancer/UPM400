@@ -16,6 +16,9 @@ namespace FoodWebAPI
             // Web API routes
             config.MapHttpAttributeRoutes();
 
+            // Lägger till support för cross origin requests
+            config.EnableCors();
+
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
                 routeTemplate: "{controller}/{id}",

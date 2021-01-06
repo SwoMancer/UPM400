@@ -271,3 +271,6 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Debug\FoodWebAPI.csproj.CoreCompileI
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Debug\FoodWebAPI.csproj.CopyComplete
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Debug\FoodWebAPI.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Debug\FoodWebAPI.pdb
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Cors.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Http.Cors.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Http.Cors.xml

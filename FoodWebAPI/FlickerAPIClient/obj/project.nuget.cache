@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "AUm/a7ZMCSAyufAVtwPfsOkPchVjtVda7thO7h2RVhppucrVcGK1cJJe8vD9u+aYG9oeBT4/KT7p/GH8PZfT4A==",
+  "dgSpecHash": "XF3/FT+2R29YK1g3HJwFIfUxfhZDTEuby0vJeR1Dlx8QF2uYuhjTWtTZx6NcK6GV2Udagoe77oRW2/0rGQslvw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\adamj\\UPM400\\FoodWebAPI\\FlickerAPIClient\\FlickerAPIClient.csproj",
+  "projectFilePath": "E:\\Openssl\\UPM400\\FoodWebAPI\\FlickerAPIClient\\FlickerAPIClient.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\adamj\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\adamj\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
-    "C:\\Users\\adamj\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],
   "logs": []
 }

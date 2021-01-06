@@ -4,11 +4,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using FoodWebAPI.DB;
 using FoodWebAPI.Models;
 
 namespace FoodWebAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class BondsController : ApiController
     {
         private FoodDBEntities db = new FoodDBEntities();

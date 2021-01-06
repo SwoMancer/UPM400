@@ -8,12 +8,14 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using FoodWebAPI.DB;
 using FoodWebAPI.Models;
 
 namespace FoodWebAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class FoodsController : ApiController
     {
         private FoodDBEntities db = new FoodDBEntities();
@@ -25,18 +27,7 @@ namespace FoodWebAPI.Controllers
             List<FoodImg> mFoods = await Containers.FoodBlock.GetFood();
             return Ok(mFoods);
         }
-        /*
-        // GET: /Foods
-        [ResponseType(typeof(List<FoodImg>))]
-        public async Task<IHttpActionResult> GetFood(Restaurant restaurant)
-        {
-            if (db.Restaurant.Contains(restaurant))
-                return Ok(new List<FoodImg>());
 
-            List<FoodImg> mFoods = await Containers.FoodBlock.GetFood(restaurant);
-            return Ok(mFoods);
-        }
-        */
         // GET: /Foods/5
         [ResponseType(typeof(FoodImg))]
         public async Task<IHttpActionResult> GetFood(int id)
@@ -115,11 +106,21 @@ namespace FoodWebAPI.Controllers
         [ResponseType(typeof(FoodImg))]
         public async Task<IHttpActionResult> DeleteFood(int id)
         {
+            //Hitta och ta bort
             Food food = await db.Food.FindAsync(id);
             if (food == null)
                 return NotFound();
 
-            FoodImg imgFood = await Containers.FoodBlock.DeleteFood(food);
+            db.Food.Remove(food);
+            await db.SaveChangesAsync();
+
+            //Något att ge tillbacka
+
+            FoodImg imgFood = new FoodImg();
+
+            imgFood = FoodImg.ToFood(food);
+            await imgFood.getImages();
+
             return Ok(FoodImg.ToFood(imgFood));
         }
 
