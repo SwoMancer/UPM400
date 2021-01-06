@@ -14,6 +14,7 @@ namespace FoodWebAPITests
     [TestClass]
     public class FoodTest
     {
+        
 
         [TestMethod]
         public async void Get_Food()
@@ -23,7 +24,7 @@ namespace FoodWebAPITests
             var item = await FoodWebAPI.Containers.FoodBlock.GetFood(3); // Hämtar ett objekt med Id: 3
 
             // Assert
-            Assert.IsTrue(item.Id > 1);
+            Assert.IsTrue(item.Id == 3);
         }
 
         [TestMethod]
@@ -122,7 +123,7 @@ namespace FoodWebAPITests
             }
 
             // Assert
-            Assert.IsNotNull(bFood); // Om objektet har ett Id mindre än 1 så innebär det att det gick att ta bort objektet
+            Assert.IsNull(bFood); // Om objektet är null så innebär det att det gick att ta bort objektet
         }
 
         [TestMethod]
