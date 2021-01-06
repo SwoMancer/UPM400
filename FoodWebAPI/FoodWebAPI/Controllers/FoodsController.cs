@@ -88,14 +88,27 @@ namespace FoodWebAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            DB.Food foodDb = db.Food
-                .Where(n => n.Name == food.Name)
-                .Where(i => i.Id_Restaurant == food.Id_Restaurant)
-                .Where(p => p.Price == food.Price)
-                .FirstOrDefault();
+            DB.Food foodDb = await Containers.FoodBlock.FindFoodByNoId(food.ToDBFood());
+            FoodImg imgFoodOutput = new FoodImg();
 
-            FoodImg imgFood = await Containers.FoodBlock.PostFood(foodDb);
-            return CreatedAtRoute("DefaultApi", new { id = imgFood.Id }, imgFood);
+            if (foodDb is null || foodDb.Id < 0)
+            {
+                Food inputDbFood = food.ToDBFood();
+                db.Food.Add(inputDbFood);
+                await db.SaveChangesAsync();
+
+                foodDb = await Containers.FoodBlock.FindFoodByNoId(food.ToDBFood());
+
+                imgFoodOutput = FoodImg.ToFood(foodDb);
+                await imgFoodOutput.getImages();
+            }
+            else
+            {
+                imgFoodOutput = FoodImg.ToFood(foodDb);
+                await imgFoodOutput.getImages();
+            }
+
+            return CreatedAtRoute("DefaultApi", new { id = imgFoodOutput.Id }, imgFoodOutput);
         }
 
         // DELETE: /Foods/5

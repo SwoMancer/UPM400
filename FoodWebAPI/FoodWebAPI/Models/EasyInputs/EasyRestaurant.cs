@@ -13,7 +13,8 @@ namespace FoodWebAPI.Models.EasyInputs
         public int Popularity { get; set; }
         public int Id_City { get; set; }
         public string Adress { get; set; }
-        public Byte[] Img { get; set; }
+        public string TypeOfFood { get; set; }
+        public string Img { get; set; }
 
         public Answer Controllers()
         {
@@ -42,6 +43,7 @@ namespace FoodWebAPI.Models.EasyInputs
             restaurant.Img = Img;
             restaurant.Name = Name;
             restaurant.Popularity = Popularity;
+            restaurant.TypeOfFood = TypeOfFood;
 
             return restaurant;
         }

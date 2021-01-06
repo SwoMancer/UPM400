@@ -85,6 +85,7 @@ namespace FoodWebAPI.Controllers
                 .Where(i => i.Img.Length == restaurant.Img.Length)
                 .Where(n => n.Name == restaurant.Name)
                 .Where(p => p.Popularity == restaurant.Popularity)
+                .Where(t => t.TypeOfFood == restaurant.TypeOfFood)
                 .FirstOrDefault();
 
             return CreatedAtRoute("DefaultApi", new { Name = restaurantDb.Id }, restaurantDb);
