@@ -14,6 +14,7 @@ namespace FoodWebAPITests
     [TestClass]
     public class FoodTest
     {
+        
 
         [TestMethod]
         public async void Get_Food()
@@ -23,7 +24,7 @@ namespace FoodWebAPITests
             var item = await FoodWebAPI.Containers.FoodBlock.GetFood(3); // Hämtar ett objekt med Id: 3
 
             // Assert
-            Assert.IsTrue(item.Id > 1);
+            Assert.IsTrue(item.Id == 3);
         }
 
         [TestMethod]
@@ -48,25 +49,39 @@ namespace FoodWebAPITests
         public async void Put_Food()
         {
             //Arrange 
-            string Name = "";
+            Food newFood = new Food(); // Skapar en ny Food
+            Food newF = new Food();
+            Food newFo = new Food();
 
             // Act
-            Food newFood = new Food(); // Skapar en ny Food
-            newFood.Name = "Köttbullar med mos";
-            var updatedFood = await FoodWebAPI.Containers.FoodBlock.PutFood(newFood);
+            newFood.Name = "Pasta Carbonara";
+            await FoodWebAPI.Containers.FoodBlock.PostFood(newFood);
 
             var result = await FoodWebAPI.Containers.FoodBlock.GetFood(); // Hämtar en lista med alla Food
 
-            foreach (var item in result) // Loopar igenom listan och ser om det finns en Food med samma Id som newFood.Id
+            foreach (var item in result) // Loopar igenom listan och ser om det finns en Food med namnet "Pasta Carbonara"
             {
-                if (item.Id == newFood.Id)
+                if (item.Name == "Pasta Carbonara")
                 {
-                    Name = item.Name;
+                    newF = item;
+                }
+            }
+
+            newF.Name = "Spaghetti med köttfärssås";
+            await FoodWebAPI.Containers.FoodBlock.PutFood(newF);
+
+            var secondResult = await FoodWebAPI.Containers.FoodBlock.GetFood(); // Hämtar en lista med alla Food igen
+
+            foreach (var item in secondResult) // Loopar igenom listan och ser om det finns en Food med samma Id
+            {
+                if (item.Id == newF.Id)
+                {
+                    newFo = item;
                 }
             }
 
             // Assert
-            Assert.AreEqual("Köttbullar med mos", Name); // Om det finns en Food med samma Id så kollar vi om namnet för det objektet har ändrats
+            Assert.AreEqual("Spaghetti med köttfärssås", newFo.Name); // Om det finns en Food med samma Id så kollar vi om namnet för det objektet har ändrats
         }
 
         [TestMethod]
@@ -108,11 +123,11 @@ namespace FoodWebAPITests
             }
 
             // Assert
-            Assert.IsNotNull(bFood); // Om objektet har ett Id mindre än 1 så innebär det att det gick att ta bort objektet
+            Assert.IsNull(bFood); // Om objektet är null så innebär det att det gick att ta bort objektet
         }
 
         [TestMethod]
-        public async void Post_City()
+        public async void Post_Food()
         {
             // Arrange
             int f_count = 0;
