@@ -10,7 +10,6 @@ using FoodWebAPI.Models;
 
 namespace FoodWebAPI.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class BondsController : ApiController
     {
         private FoodDBEntities db = new FoodDBEntities();

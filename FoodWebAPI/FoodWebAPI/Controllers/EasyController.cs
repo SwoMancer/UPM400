@@ -13,7 +13,6 @@ using FoodWebAPI.Models;
 
 namespace FoodWebAPI.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class EasyController : ApiController
     {
         #region props

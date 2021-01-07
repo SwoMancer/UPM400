@@ -15,7 +15,6 @@ using FoodWebAPI.Models.EasyInputs;
 
 namespace FoodWebAPI.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CitiesController : ApiController
     {
         private FoodDBEntities db = new FoodDBEntities();

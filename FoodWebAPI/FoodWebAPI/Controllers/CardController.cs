@@ -9,7 +9,6 @@ using FoodWebAPI.Models;
 
 namespace FoodWebAPI.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class CardController : ApiController
     {
         // GET api/values/5

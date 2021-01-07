@@ -14,7 +14,6 @@ using FoodWebAPI.DB;
 
 namespace FoodWebAPI.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DrinksController : ApiController
     {
         private FoodDBEntities db = new FoodDBEntities();
