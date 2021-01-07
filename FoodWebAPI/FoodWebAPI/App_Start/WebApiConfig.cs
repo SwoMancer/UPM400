@@ -11,14 +11,14 @@ namespace FoodWebAPI
         public static void Register(HttpConfiguration config)
         {
             // Lägger till support för cross origin requests
-            var cors = new EnableCorsAttribute("http://127.0.0.1:5500", "*", "*");
+            var cors = new EnableCorsAttribute("*", "*", "*");
             config.EnableCors(cors);
+            //config.EnableCors(new EnableCorsAttribute(Properties.Settings.Default.Cors, "", ""))
+
 
             // Web API configuration and services
-            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling 
-                = Newtonsoft.Json.ReferenceLoopHandling.Serialize;
-            config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling 
-                = Newtonsoft.Json.PreserveReferencesHandling.Objects;
+            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            config.Formatters.JsonFormatter.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None;
 
             // Web API routes
             config.MapHttpAttributeRoutes();
