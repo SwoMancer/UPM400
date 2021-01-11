@@ -180,6 +180,10 @@ G:\Github\UPM400\FoodWebAPI\FoodWebAPI\obj\Debug\FoodWebAPI.csproj.CoreCompileIn
 G:\Github\UPM400\FoodWebAPI\FoodWebAPI\obj\Debug\FoodWebAPI.csproj.CopyComplete
 G:\Github\UPM400\FoodWebAPI\FoodWebAPI\obj\Debug\FoodWebAPI.dll
 G:\Github\UPM400\FoodWebAPI\FoodWebAPI\obj\Debug\FoodWebAPI.pdb
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FoodWebAPI.dll.config
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FoodWebAPI.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FoodWebAPI.pdb
@@ -192,12 +196,10 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\csi.rsp
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
-E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.CSharp.Core.targets
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
-E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.Managed.Core.targets
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.VisualBasic.Core.targets
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\Microsoft.Win32.Primitives.dll
@@ -218,9 +220,7 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Reflection.Metadata.dl
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Security.Cryptography.Algorithms.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Security.Cryptography.Encoding.dll
-E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Security.Cryptography.Primitives.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
-E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Text.Encoding.CodePages.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Threading.Tasks.Extensions.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.ValueTuple.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\roslyn\System.Xml.ReaderWriter.dll
@@ -240,7 +240,9 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\Microsoft.CodeDom.Providers.DotNetCo
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\Microsoft.Web.Infrastructure.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\Newtonsoft.Json.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Net.Http.Formatting.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Cors.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Helpers.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Http.Cors.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Http.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Http.WebHost.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Mvc.dll
@@ -254,6 +256,7 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FlickerAPIClient.pdb
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\EntityFramework.xml
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\EntityFramework.SqlServer.xml
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\Newtonsoft.Json.xml
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Http.Cors.xml
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Net.Http.Formatting.xml
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Helpers.xml
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Http.xml

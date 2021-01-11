@@ -54,7 +54,21 @@ namespace FoodWebAPI.Models
             Answer answer = new Answer();
 
             answer.IsASuccess = false;
-            answer.Json = ex.ToString();
+            answer.Json = ex;
+
+            return answer;
+        }
+        /// <summary>
+        /// Use to tell why a request failed and use an <see cref="ErrorLog"/> to tell why.
+        /// </summary>
+        /// <param name="ex">The ex<see cref="ErrorLog"/>.</param>
+        /// <returns>The <see cref="Answer"/> holds a failed request.</returns>
+        public static Answer Error(ErrorLog ex)
+        {
+            Answer answer = new Answer();
+
+            answer.IsASuccess = false;
+            answer.Json = ex;
 
             return answer;
         }

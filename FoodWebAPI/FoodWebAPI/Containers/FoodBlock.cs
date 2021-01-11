@@ -14,6 +14,17 @@ namespace FoodWebAPI.Containers
     {
         private static readonly FoodDBEntities db = new FoodDBEntities();
 
+        public static async Task<DB.Food> FindFoodByNoId(DB.Food inputFood)
+        {
+            DB.Food outputFood = await db.Food
+                .Where(n => n.Name == inputFood.Name)
+                .Where(p => p.Price == inputFood.Price)
+                .Where(t => t.Type == inputFood.Type)
+                .Where(i => i.Id_Restaurant == inputFood.Id_Restaurant)
+                .FirstOrDefaultAsync();
+            return outputFood;
+        }
+
         public static async Task<List<FoodImg>> GetFood()
         {
             IQueryable<Food> foods = db.Food;

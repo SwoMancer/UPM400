@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 12/27/2020 22:32:36
+-- Date Created: 01/01/2021 16:31:52
 -- Generated from EDMX file: E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\DB\FoodDBModel.edmx
 -- --------------------------------------------------
 
@@ -17,32 +17,32 @@ GO
 -- Dropping existing FOREIGN KEY constraints
 -- --------------------------------------------------
 
+IF OBJECT_ID(N'[dbo].[FK_Order_City]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Order] DROP CONSTRAINT [FK_Order_City];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Restaurant_City]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Restaurant] DROP CONSTRAINT [FK_Restaurant_City];
+GO
+IF OBJECT_ID(N'[dbo].[FK_Order_To_Drink_Drink]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Order_To_Drink] DROP CONSTRAINT [FK_Order_To_Drink_Drink];
+GO
 IF OBJECT_ID(N'[dbo].[FK_Food_Restaurant]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Food] DROP CONSTRAINT [FK_Food_Restaurant];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Ingredient_To_Food_Food]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Ingredient_To_Food] DROP CONSTRAINT [FK_Ingredient_To_Food_Food];
 GO
+IF OBJECT_ID(N'[dbo].[FK_Order_To_Food_Food]', 'F') IS NOT NULL
+    ALTER TABLE [dbo].[Order_To_Food] DROP CONSTRAINT [FK_Order_To_Food_Food];
+GO
 IF OBJECT_ID(N'[dbo].[FK_Ingredient_To_Food_Ingredient]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Ingredient_To_Food] DROP CONSTRAINT [FK_Ingredient_To_Food_Ingredient];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Order_City]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Order] DROP CONSTRAINT [FK_Order_City];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Order_To_Drink_Drink]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Order_To_Drink] DROP CONSTRAINT [FK_Order_To_Drink_Drink];
 GO
 IF OBJECT_ID(N'[dbo].[FK_Order_To_Drink_Order]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Order_To_Drink] DROP CONSTRAINT [FK_Order_To_Drink_Order];
 GO
-IF OBJECT_ID(N'[dbo].[FK_Order_To_Food_Food]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Order_To_Food] DROP CONSTRAINT [FK_Order_To_Food_Food];
-GO
 IF OBJECT_ID(N'[dbo].[FK_Order_To_Food_Order]', 'F') IS NOT NULL
     ALTER TABLE [dbo].[Order_To_Food] DROP CONSTRAINT [FK_Order_To_Food_Order];
-GO
-IF OBJECT_ID(N'[dbo].[FK_Restaurant_City]', 'F') IS NOT NULL
-    ALTER TABLE [dbo].[Restaurant] DROP CONSTRAINT [FK_Restaurant_City];
 GO
 
 -- --------------------------------------------------
@@ -124,7 +124,6 @@ GO
 -- Creating table 'Order'
 CREATE TABLE [dbo].[Order] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [CreationTime] binary(8)  NOT NULL,
     [CustomerFirstName] varchar(50)  NOT NULL,
     [CustomerLastName] varchar(50)  NOT NULL,
     [CustomerAdress] varchar(50)  NOT NULL,
@@ -158,7 +157,9 @@ CREATE TABLE [dbo].[Restaurant] (
     [Name] varchar(50)  NOT NULL,
     [Popularity] int  NULL,
     [Id_City] int  NULL,
-    [Adress] nvarchar(max)  NOT NULL
+    [Adress] nvarchar(max)  NOT NULL,
+    [Img] nvarchar(max)  NULL,
+    [TypeOfFood] nvarchar(max)  NOT NULL
 );
 GO
 

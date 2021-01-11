@@ -50,7 +50,6 @@
       <EntityTypeMapping TypeName="IsTypeOf(FoodDBModel.Order)">
         <MappingFragment StoreEntitySet="Order">
           <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="CreationTime" ColumnName="CreationTime" />
           <ScalarProperty Name="CustomerFirstName" ColumnName="CustomerFirstName" />
           <ScalarProperty Name="CustomerLastName" ColumnName="CustomerLastName" />
           <ScalarProperty Name="CustomerAdress" ColumnName="CustomerAdress" />
@@ -83,12 +82,13 @@
     <EntitySetMapping Name="Restaurant">
       <EntityTypeMapping TypeName="IsTypeOf(FoodDBModel.Restaurant)">
         <MappingFragment StoreEntitySet="Restaurant">
-          <ScalarProperty Name="Img" ColumnName="Img" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Popularity" ColumnName="Popularity" />
           <ScalarProperty Name="Id_City" ColumnName="Id_City" />
           <ScalarProperty Name="Adress" ColumnName="Adress" />
+          <ScalarProperty Name="Img" ColumnName="Img" />
+          <ScalarProperty Name="TypeOfFood" ColumnName="TypeOfFood" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

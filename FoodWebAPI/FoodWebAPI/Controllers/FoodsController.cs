@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using FoodWebAPI.DB;
 using FoodWebAPI.Models;
@@ -25,18 +26,7 @@ namespace FoodWebAPI.Controllers
             List<FoodImg> mFoods = await Containers.FoodBlock.GetFood();
             return Ok(mFoods);
         }
-        /*
-        // GET: /Foods
-        [ResponseType(typeof(List<FoodImg>))]
-        public async Task<IHttpActionResult> GetFood(Restaurant restaurant)
-        {
-            if (db.Restaurant.Contains(restaurant))
-                return Ok(new List<FoodImg>());
 
-            List<FoodImg> mFoods = await Containers.FoodBlock.GetFood(restaurant);
-            return Ok(mFoods);
-        }
-        */
         // GET: /Foods/5
         [ResponseType(typeof(FoodImg))]
         public async Task<IHttpActionResult> GetFood(int id)
@@ -88,25 +78,48 @@ namespace FoodWebAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            DB.Food foodDb = db.Food
-                .Where(n => n.Name == food.Name)
-                .Where(i => i.Id_Restaurant == food.Id_Restaurant)
-                .Where(p => p.Price == food.Price)
-                .FirstOrDefault();
+            DB.Food foodDb = await Containers.FoodBlock.FindFoodByNoId(food.ToDBFood());
+            FoodImg imgFoodOutput = new FoodImg();
 
-            FoodImg imgFood = await Containers.FoodBlock.PostFood(foodDb);
-            return CreatedAtRoute("DefaultApi", new { id = imgFood.Id }, imgFood);
+            if (foodDb is null || foodDb.Id < 0)
+            {
+                Food inputDbFood = food.ToDBFood();
+                db.Food.Add(inputDbFood);
+                await db.SaveChangesAsync();
+
+                foodDb = await Containers.FoodBlock.FindFoodByNoId(food.ToDBFood());
+
+                imgFoodOutput = FoodImg.ToFood(foodDb);
+                await imgFoodOutput.getImages();
+            }
+            else
+            {
+                imgFoodOutput = FoodImg.ToFood(foodDb);
+                await imgFoodOutput.getImages();
+            }
+
+            return CreatedAtRoute("DefaultApi", new { id = imgFoodOutput.Id }, imgFoodOutput);
         }
 
         // DELETE: /Foods/5
         [ResponseType(typeof(FoodImg))]
         public async Task<IHttpActionResult> DeleteFood(int id)
         {
+            //Hitta och ta bort
             Food food = await db.Food.FindAsync(id);
             if (food == null)
                 return NotFound();
 
-            FoodImg imgFood = await Containers.FoodBlock.DeleteFood(food);
+            db.Food.Remove(food);
+            await db.SaveChangesAsync();
+
+            //Något att ge tillbacka
+
+            FoodImg imgFood = new FoodImg();
+
+            imgFood = FoodImg.ToFood(food);
+            await imgFood.getImages();
+
             return Ok(FoodImg.ToFood(imgFood));
         }
 

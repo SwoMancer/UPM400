@@ -59,11 +59,17 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.7\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.7\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Abstractions" />
@@ -163,9 +169,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Containers\FoodBlock.cs" />
+    <Compile Include="Controllers\BondsController.cs" />
     <Compile Include="Controllers\CardController.cs" />
     <Compile Include="Controllers\CitiesController.cs" />
     <Compile Include="Controllers\DrinksController.cs" />
+    <Compile Include="Controllers\EasyController.cs" />
     <Compile Include="Controllers\FoodsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\IngredientsController.cs" />
@@ -218,13 +226,18 @@
     <Compile Include="Models\EasyInputs\EasyCity.cs" />
     <Compile Include="Models\EasyInputs\EasyDrink.cs" />
     <Compile Include="Models\EasyInputs\EasyFood.cs" />
+    <Compile Include="Models\EasyInputs\EasyFoodAndIngredients.cs" />
     <Compile Include="Models\EasyInputs\EasyIngredient.cs" />
     <Compile Include="Models\EasyInputs\EasyOrder.cs" />
+    <Compile Include="Models\EasyInputs\EasyOrderAndFoodsIdsAndDrinksIds.cs" />
     <Compile Include="Models\EasyInputs\EasyRestaurant.cs" />
+    <Compile Include="Models\ErrorLog.cs" />
     <Compile Include="Models\FoodImg.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ToLongJSON\CityShort.cs" />
+    <Compile Include="Models\ToLongJSON\RestaurantShort.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

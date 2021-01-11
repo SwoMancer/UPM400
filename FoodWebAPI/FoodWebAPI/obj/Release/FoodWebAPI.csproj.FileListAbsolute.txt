@@ -89,3 +89,6 @@ E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Release\FoodWebAPI.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\obj\Release\FoodWebAPI.pdb
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FlickerAPIClient.dll
 E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\FlickerAPIClient.pdb
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Cors.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Http.Cors.dll
+E:\Openssl\UPM400\FoodWebAPI\FoodWebAPI\bin\System.Web.Http.Cors.xml
