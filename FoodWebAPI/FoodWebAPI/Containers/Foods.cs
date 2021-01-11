@@ -3,6 +3,7 @@ using FoodWebAPI.Models;
 using FoodWebAPI.Models.EasyInputs;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -42,41 +43,59 @@ namespace FoodWebAPI.Containers
         }
         public static async Task<FoodImg> Add(EasyFood food)
         {
-            DB.Food foodDb = await Containers.FoodBlock.FindFoodByNoId(food.ToDBFood());
-            FoodImg imgFoodOutput = new FoodImg();
-
-            if (foodDb is null || foodDb.Id < 0)
+            try
             {
-                Food inputDbFood = food.ToDBFood();
-                db.Food.Add(inputDbFood);
+                DB.Food foodDb = await FindFoodByNoId(food.ToDBFood());
+                FoodImg imgFoodOutput = new FoodImg();
+
+                if (foodDb is null || foodDb.Id < 0)
+                {
+                    Food inputDbFood = food.ToDBFood();
+                    db.Food.Add(inputDbFood);
+                    await db.SaveChangesAsync();
+
+                    foodDb = await FindFoodByNoId(food.ToDBFood());
+
+                    imgFoodOutput = FoodImg.ToFood(foodDb);
+                    await imgFoodOutput.getImages();
+                }
+                else
+                {
+                    imgFoodOutput = FoodImg.ToFood(foodDb);
+                    await imgFoodOutput.getImages();
+                }
+
+                return imgFoodOutput;
+
+            }
+            catch (Exception)
+            {
+                return new FoodImg();
+            }
+        }
+        public static async Task<FoodImg> Remove(DB.Food inputFood)
+        {
+            try
+            {
+                Food outputFood = new Food();
+                outputFood = inputFood;
+
+                db.Food.Remove(outputFood);
                 await db.SaveChangesAsync();
 
-                foodDb = await Containers.FoodBlock.FindFoodByNoId(food.ToDBFood());
+                //Något att ge tillbacka
 
-                imgFoodOutput = FoodImg.ToFood(foodDb);
-                await imgFoodOutput.getImages();
+                FoodImg imgFood = new FoodImg();
+
+                imgFood = FoodImg.ToFood(outputFood);
+                await imgFood.getImages();
+
+                return imgFood;
             }
-            else
+            catch (Exception)
             {
-                imgFoodOutput = FoodImg.ToFood(foodDb);
-                await imgFoodOutput.getImages();
+                return new FoodImg();
             }
-
-            return imgFoodOutput;
-        }
-        public static async Task<FoodImg> Remove(DB.Food food)
-        {
-            db.Food.Remove(food);
-            await db.SaveChangesAsync();
-
-            //Något att ge tillbacka
-
-            FoodImg imgFood = new FoodImg();
-
-            imgFood = FoodImg.ToFood(food);
-            await imgFood.getImages();
-
-            return imgFood;
         }
         #endregion
         #region

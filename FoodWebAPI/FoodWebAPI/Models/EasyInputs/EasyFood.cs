@@ -19,6 +19,7 @@ namespace FoodWebAPI.Models.EasyInputs
             food.Type = Type;
             food.Price = Price;
             food.Id_Restaurant = Id_Restaurant;
+            food.Id = 0;
 
             return food;
         }

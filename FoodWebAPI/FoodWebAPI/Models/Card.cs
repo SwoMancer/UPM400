@@ -8,7 +8,7 @@ namespace FoodWebAPI.Models
 
     public class Card
     {
-        public int CardNumber { get; set; }
+        public long CardNumber { get; set; }
         public int Month { get; set; }
         public int Year { get; set; }
         public int CVC { get; set; }
@@ -44,6 +44,12 @@ namespace FoodWebAPI.Models
                 return Answer.Complete();
         }
         private static bool LengthIsRight(int input, int max)
+        {
+            if (input.ToString().Length == max)
+                return true;
+            return false;
+        }
+        private static bool LengthIsRight(long input, int max)
         {
             if (input.ToString().Length == max)
                 return true;
