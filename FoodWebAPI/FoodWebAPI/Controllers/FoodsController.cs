@@ -12,6 +12,7 @@ using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using FoodWebAPI.DB;
 using FoodWebAPI.Models;
+using FoodWebAPI.Models.EasyInputs;
 
 namespace FoodWebAPI.Controllers
 {
@@ -23,7 +24,7 @@ namespace FoodWebAPI.Controllers
         [ResponseType(typeof(List<FoodImg>))]
         public async Task<IHttpActionResult> GetFood()
         {
-            List<FoodImg> mFoods = await Containers.FoodBlock.GetFood();
+            List<FoodImg> mFoods = await Containers.Foods.GetAll();
             return Ok(mFoods);
         }
 
@@ -31,7 +32,7 @@ namespace FoodWebAPI.Controllers
         [ResponseType(typeof(FoodImg))]
         public async Task<IHttpActionResult> GetFood(int id)
         {
-            FoodImg food = await Containers.FoodBlock.GetFood(id);
+            FoodImg food = await Containers.Foods.GetOne(id);
 
             if (food == null)
                 return NotFound();
@@ -78,28 +79,12 @@ namespace FoodWebAPI.Controllers
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
 
-            DB.Food foodDb = await Containers.FoodBlock.FindFoodByNoId(food.ToDBFood());
-            FoodImg imgFoodOutput = new FoodImg();
-
-            if (foodDb is null || foodDb.Id < 0)
-            {
-                Food inputDbFood = food.ToDBFood();
-                db.Food.Add(inputDbFood);
-                await db.SaveChangesAsync();
-
-                foodDb = await Containers.FoodBlock.FindFoodByNoId(food.ToDBFood());
-
-                imgFoodOutput = FoodImg.ToFood(foodDb);
-                await imgFoodOutput.getImages();
-            }
-            else
-            {
-                imgFoodOutput = FoodImg.ToFood(foodDb);
-                await imgFoodOutput.getImages();
-            }
+            FoodImg imgFoodOutput = await Containers.Foods.Add(food);
 
             return CreatedAtRoute("DefaultApi", new { id = imgFoodOutput.Id }, imgFoodOutput);
         }
+
+        
 
         // DELETE: /Foods/5
         [ResponseType(typeof(FoodImg))]
@@ -110,17 +95,10 @@ namespace FoodWebAPI.Controllers
             if (food == null)
                 return NotFound();
 
-            db.Food.Remove(food);
-            await db.SaveChangesAsync();
+            FoodImg foodImg = new FoodImg();
+            foodImg = await Containers.Foods.Remove(food);
 
-            //Något att ge tillbacka
-
-            FoodImg imgFood = new FoodImg();
-
-            imgFood = FoodImg.ToFood(food);
-            await imgFood.getImages();
-
-            return Ok(FoodImg.ToFood(imgFood));
+            return Ok(FoodImg.ToFood(foodImg));
         }
 
         protected override void Dispose(bool disposing)

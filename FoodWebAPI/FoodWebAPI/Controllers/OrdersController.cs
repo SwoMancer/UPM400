@@ -75,11 +75,15 @@ namespace FoodWebAPI.Controllers
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-            
+
+            DB.Order outputOrder = new DB.Order();
+
+            outputOrder = order.ToDBOrder();
 
             db.Order.Add(order.ToDBOrder());
             await db.SaveChangesAsync();
 
+            /*
             DB.Order orderDb = db.Order
                 .Where(c => c.Id_City == order.Id_City)
                 .Where(c => c.CustomerAdress == order.CustomerAdress)
@@ -89,8 +93,9 @@ namespace FoodWebAPI.Controllers
                 .Where(c => c.CustomerPhoneNumber == order.CustomerPhoneNumber)
                 .Where(c => c.CustomerZIP == order.CustomerZIP)
                 .FirstOrDefault();
+            */
 
-            return CreatedAtRoute("DefaultApi", new { id = orderDb.Id }, orderDb);
+            return CreatedAtRoute("DefaultApi", new { id = outputOrder.Id }, outputOrder);
         }
 
         // DELETE: /Orders/5
