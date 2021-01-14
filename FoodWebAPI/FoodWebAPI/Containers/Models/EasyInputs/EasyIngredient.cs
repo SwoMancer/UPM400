@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FoodWebAPI.Models.EasyInputs
+namespace FoodWebAPI.Containers.Models.EasyInputs
 {
     public class EasyIngredient
     {

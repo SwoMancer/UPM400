@@ -1,5 +1,5 @@
 ﻿using FoodWebAPI.DB;
-using FoodWebAPI.Models;
+using FoodWebAPI.Containers.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,6 +7,9 @@ using System.Web;
 
 namespace FoodWebAPI.Containers
 {
+    /*
+     * The Bonds class are use for controlling relationship between tables
+     */
     public static class Bonds
     {
         private static FoodDBEntities db = new FoodDBEntities();

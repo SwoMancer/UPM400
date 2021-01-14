@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FoodWebAPI.Models
+namespace FoodWebAPI.Containers.Models
 {
     /// <summary>
     /// Defines the <see cref="Answer" /> class is used for sending a JSON message in a web API to an end-user. 
@@ -59,20 +59,6 @@ namespace FoodWebAPI.Models
             return answer;
         }
         /// <summary>
-        /// Use to tell why a request failed and use an <see cref="ErrorLog"/> to tell why.
-        /// </summary>
-        /// <param name="ex">The ex<see cref="ErrorLog"/>.</param>
-        /// <returns>The <see cref="Answer"/> holds a failed request.</returns>
-        public static Answer Error(ErrorLog ex)
-        {
-            Answer answer = new Answer();
-
-            answer.IsASuccess = false;
-            answer.Json = ex;
-
-            return answer;
-        }
-        /// <summary>
         /// Use to tell why a request failed and use an <see cref="string"/> to tell why.
         /// </summary>
         /// <param name="text">The text<see cref="string"/>.</param>
@@ -86,6 +72,7 @@ namespace FoodWebAPI.Models
 
             return answer;
         }
+        
         /// <summary>
         /// Use to tell why a request was successful and use an <see cref="string"/> to tell why 
         /// or don't it can be null if no answer is needed to be told to the end-user.. 

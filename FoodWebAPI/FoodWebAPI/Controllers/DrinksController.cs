@@ -39,7 +39,7 @@ namespace FoodWebAPI.Controllers
 
         // PUT: /Drinks/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutDrink(int id, Models.EasyInputs.EasyDrink drink)
+        public async Task<IHttpActionResult> PutDrink(int id, Containers.Models.EasyInputs.EasyDrink drink)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -70,7 +70,7 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Drinks
         [ResponseType(typeof(Drink))]
-        public async Task<IHttpActionResult> PostDrink(Models.EasyInputs.EasyDrink drink)
+        public async Task<IHttpActionResult> PostDrink(Containers.Models.EasyInputs.EasyDrink drink)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

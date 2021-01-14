@@ -11,7 +11,7 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using FoodWebAPI.DB;
-using FoodWebAPI.Models.EasyInputs;
+using FoodWebAPI.Containers.Models.EasyInputs;
 
 namespace FoodWebAPI.Controllers
 {
@@ -70,11 +70,6 @@ namespace FoodWebAPI.Controllers
             }
 
             return StatusCode(HttpStatusCode.NoContent);
-        }
-
-        public City Putcity()
-        {
-            throw new NotImplementedException();
         }
 
         // POST: /Cities

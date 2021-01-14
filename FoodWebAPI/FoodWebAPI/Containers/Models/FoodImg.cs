@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace FoodWebAPI.Models
+namespace FoodWebAPI.Containers.Models
 {
     public class FoodImg : DB.Food
     {

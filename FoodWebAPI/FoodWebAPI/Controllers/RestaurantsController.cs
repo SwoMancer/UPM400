@@ -39,7 +39,7 @@ namespace FoodWebAPI.Controllers
        
         // PUT: /Restaurants/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutRestaurant(int id, Models.EasyInputs.EasyRestaurant restaurant)
+        public async Task<IHttpActionResult> PutRestaurant(int id, Containers.Models.EasyInputs.EasyRestaurant restaurant)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -71,7 +71,7 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Restaurants/
         [ResponseType(typeof(Restaurant))]
-        public async Task<IHttpActionResult> PostRestaurant(Models.EasyInputs.EasyRestaurant restaurant)
+        public async Task<IHttpActionResult> PostRestaurant(Containers.Models.EasyInputs.EasyRestaurant restaurant)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -107,21 +107,6 @@ namespace FoodWebAPI.Controllers
 
             return Ok(restaurant);
         }
-        /*
-        // POST: /Restaurants/
-        [ResponseType(typeof(List<Restaurant>))]
-        public async Task<IHttpActionResult> GetRestaurant(City city)
-        {
-            List<Restaurant> restaurants = await db.Restaurant.Where(c => c.Id_City == city.Id).ToListAsync();
-            
-            if (restaurants is null || restaurants.Count <= 0)
-            {
-                return NotFound();
-            }
-
-            return Ok(restaurants);
-        }
-        */
         protected override void Dispose(bool disposing)
         {
             if (disposing)

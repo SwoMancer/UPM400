@@ -5,7 +5,7 @@ using System.Web;
 using System.IO;
 using System.Drawing;
 
-namespace FoodWebAPI.Models.EasyInputs
+namespace FoodWebAPI.Containers.Models.EasyInputs
 {
     public class EasyRestaurant
     {

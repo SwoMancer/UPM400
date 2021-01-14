@@ -10,7 +10,7 @@ namespace FoodWebAPI.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "Web API for Food ordering";
 
             return View();
         }

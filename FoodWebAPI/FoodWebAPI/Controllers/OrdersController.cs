@@ -39,7 +39,7 @@ namespace FoodWebAPI.Controllers
 
         // PUT: /Orders/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutOrder(int id, Models.EasyInputs.EasyOrder order)
+        public async Task<IHttpActionResult> PutOrder(int id, Containers.Models.EasyInputs.EasyOrder order)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -71,7 +71,7 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Orders
         [ResponseType(typeof(Order))]
-        public async Task<IHttpActionResult> PostOrder(Models.EasyInputs.EasyOrder order)
+        public async Task<IHttpActionResult> PostOrder(Containers.Models.EasyInputs.EasyOrder order)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -82,18 +82,6 @@ namespace FoodWebAPI.Controllers
 
             db.Order.Add(order.ToDBOrder());
             await db.SaveChangesAsync();
-
-            /*
-            DB.Order orderDb = db.Order
-                .Where(c => c.Id_City == order.Id_City)
-                .Where(c => c.CustomerAdress == order.CustomerAdress)
-                .Where(c => c.CustomerEmail == order.CustomerEmail)
-                .Where(c => c.CustomerFirstName == order.CustomerFirstName)
-                .Where(c => c.CustomerLastName == order.CustomerLastName)
-                .Where(c => c.CustomerPhoneNumber == order.CustomerPhoneNumber)
-                .Where(c => c.CustomerZIP == order.CustomerZIP)
-                .FirstOrDefault();
-            */
 
             return CreatedAtRoute("DefaultApi", new { id = outputOrder.Id }, outputOrder);
         }

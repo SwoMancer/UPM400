@@ -11,8 +11,8 @@ using System.Web.Http;
 using System.Web.Http.Cors;
 using System.Web.Http.Description;
 using FoodWebAPI.DB;
-using FoodWebAPI.Models;
-using FoodWebAPI.Models.EasyInputs;
+using FoodWebAPI.Containers.Models;
+using FoodWebAPI.Containers.Models.EasyInputs;
 
 namespace FoodWebAPI.Controllers
 {
@@ -43,7 +43,7 @@ namespace FoodWebAPI.Controllers
 
         // PUT: /Foods/5
         [ResponseType(typeof(void))]
-        public async Task<IHttpActionResult> PutFood(int id, Models.EasyInputs.EasyFood food)
+        public async Task<IHttpActionResult> PutFood(int id, Containers.Models.EasyInputs.EasyFood food)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -74,7 +74,7 @@ namespace FoodWebAPI.Controllers
 
         // POST: /Foods
         [ResponseType(typeof(FoodImg))]
-        public async Task<IHttpActionResult> PostFood(Models.EasyInputs.EasyFood food)
+        public async Task<IHttpActionResult> PostFood(Containers.Models.EasyInputs.EasyFood food)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);

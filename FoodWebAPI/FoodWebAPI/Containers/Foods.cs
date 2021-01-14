@@ -1,6 +1,6 @@
 ﻿using FoodWebAPI.DB;
-using FoodWebAPI.Models;
-using FoodWebAPI.Models.EasyInputs;
+using FoodWebAPI.Containers.Models;
+using FoodWebAPI.Containers.Models.EasyInputs;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -10,11 +10,17 @@ using System.Web;
 
 namespace FoodWebAPI.Containers
 {
+    /*
+     * The Foods class contain the functionality that's needed for controlling the Foods table
+     */
     public static class Foods
     {
+        #region Props
         private static DB.FoodDBEntities db = new FoodDBEntities();
+        #endregion
 
-        #region public
+        #region Public
+        #region Get
         public static async Task<List<FoodImg>> GetAll()
         {
             IQueryable<Food> foods = db.Food;
@@ -41,6 +47,8 @@ namespace FoodWebAPI.Containers
         {
             return FoodImg.ToFood(await db.Food.FindAsync(id));
         }
+        #endregion
+        #region Add
         public static async Task<FoodImg> Add(EasyFood food)
         {
             try
@@ -73,6 +81,8 @@ namespace FoodWebAPI.Containers
                 return new FoodImg();
             }
         }
+        #endregion
+        #region Remove
         public static async Task<FoodImg> Remove(DB.Food inputFood)
         {
             try
@@ -98,7 +108,8 @@ namespace FoodWebAPI.Containers
             }
         }
         #endregion
-        #region
+        #endregion
+        #region Private
         private static async Task<DB.Food> FindFoodByNoId(DB.Food inputFood)
         {
             DB.Food outputFood = await db.Food

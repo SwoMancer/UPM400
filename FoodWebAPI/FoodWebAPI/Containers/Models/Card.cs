@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace FoodWebAPI.Models
+namespace FoodWebAPI.Containers.Models
 {
 
     public class Card
